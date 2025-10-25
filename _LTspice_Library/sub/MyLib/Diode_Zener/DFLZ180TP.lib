@@ -1,0 +1,9 @@
+* Zener Diode, 180V, 1W, 5%
+
+.subckt DFLZ180TP A K
+D1 A N1 D_DFLZ180TP
+Rpkg N1 K 0.1
+Cpar A K 5p
+.ends DFLZ180TP
+
+.model D_DFLZ180TP D(IS=1e-12 N=1 Rs=400 Cjo=1e-12 M=0.5 Vj=0.7 Eg=1.1 Bv=180 Ibv=1e-6 Nbv=12)

@@ -1,0 +1,8 @@
+* Diode,  1N4007
+.subckt 1N4007 A K
+D1 A N1 D_1N4007
+Rpkg N1 K 0.02
+Cpar A K 10p
+.ends 1N4007
+
+.model D_1N4007 D(Is=90p Rs=40m Cjo=30p N=1.4 TT=5u Iave=1 Vpk=1000 type=silicon)

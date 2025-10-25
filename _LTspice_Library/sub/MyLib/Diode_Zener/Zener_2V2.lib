@@ -1,0 +1,14 @@
+* Zener Diode 2.2V, 0.5W
+
+.subckt Zener_2V2 1 2
+*        Terminals    A   K
+D1 1 N1 D_F
+DZ N2 1 D_R
+VZ 2 N2 2.2
+Rpkg N1 2 0.05
+Cpar 1 2 5p
+.ends Zener_2V2
+
+.model D_F D(IS=50p RS=20 N=1.1 CJO=400p VJ=0.75 M=0.33 TT=50n)
+.model D_R D(IS=10f RS=80 N=3.0)
+

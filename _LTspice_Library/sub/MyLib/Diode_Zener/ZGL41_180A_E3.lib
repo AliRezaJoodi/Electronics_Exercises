@@ -1,0 +1,9 @@
+* Zener Diode, 180V, 1W, 5%
+
+.subckt ZGL41_180A_E3 A K
+D1 A N1 D_ZGL41_180A_E3
+Rpkg N1 K 0.15
+Cpar A K 5p
+.ends ZGL41_180A_E3
+
+.model D_ZGL41_180A_E3 D(IS=1e-12 N=1 Rs=900 Cjo=1e-12 M=0.5 Vj=0.7 Eg=1.1 Bv=180 Ibv=1e-6 Nbv=12)
