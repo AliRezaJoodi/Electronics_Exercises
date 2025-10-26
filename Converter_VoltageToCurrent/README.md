@@ -5,6 +5,12 @@ v1.0
 ![](Pictures_1V5V_4mA20mA/v1.0.jpg)
 
 ### Simulate, 1-5V To 4-20mA
+v2.0, Schematic  
+![](Simulate_1V5V_4mA20mA/v2.0_Schematic.png)
+
+v2.0, Plot  
+![](Simulate_1V5V_4mA20mA/v2.0_Plot.png)
+
 v1.0, Schematic  
 ![](Simulate_1V5V_4mA20mA/v1.0_Schematic.png)
 
