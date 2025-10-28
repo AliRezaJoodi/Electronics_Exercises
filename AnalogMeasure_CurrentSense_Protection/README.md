@@ -1,12 +1,7 @@
 ## Protected 4~20mA Analog Input
-A circuit that design by Jefferson Pehls for Protection a 4~20mA Current Input.
-I just tried to understand it in Proteus.
 
-### Folders and Files Description
-It has included:
-- Simulate (Included simulator file)
-
-### Simulate: v1.0
+### Simulate
+v1.0  
 ![](Simulate/v1.0.png)
 
 Source Link: [Jeferson Pehls](https://www.linkedin.com/feed/update/urn:li:activity:7042709425547001856/)
