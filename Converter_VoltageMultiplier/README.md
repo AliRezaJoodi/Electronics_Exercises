@@ -1,4 +1,4 @@
-## Cockcroft walton multiplier
+## Cockcroft walton multiplier, 3-Stage
 
 ### Simulate
 v1.0, Schematic  

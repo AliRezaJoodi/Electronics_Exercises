@@ -1,4 +1,4 @@
-## Zero Crossing Detector for Single Phase
+## Zero Crossing Detector, 1-Phase Dimmer, Non-isolated, Based on Transister
 
 ### Simulate
 v1.0., Schematic  
