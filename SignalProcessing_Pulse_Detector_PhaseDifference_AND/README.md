@@ -1,4 +1,5 @@
 ## Phase Detector
+![](Guid.png)
 
 ### Simulate
 v1.0, Schematic  
