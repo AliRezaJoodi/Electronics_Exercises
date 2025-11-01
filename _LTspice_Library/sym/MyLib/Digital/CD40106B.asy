@@ -15,9 +15,10 @@ WINDOW 0 16 0 Left 2
 WINDOW 38 16 64 Left 2
 SYMATTR SpiceModel CD40106B
 SYMATTR Prefix X
-SYMATTR Description Behavioral Schmitt-Triggered inverter
-SYMATTR ModelFile MyLib/Digital/NOT_CD40106B.lib
-SYMATTR SpiceLine vdd={12}
+SYMATTR Description Inverting buffer with Schmitt trigger input
+SYMATTR ModelFile MyLib/Digital/CD4xxx.lib
+SYMATTR SpiceLine vdd=5
+SYMATTR SpiceLine2 speed=2 tripdt=100n
 PIN 0 32 NONE 0
 PINATTR PinName in
 PINATTR SpiceOrder 1

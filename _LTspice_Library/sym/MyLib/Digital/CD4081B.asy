@@ -1,0 +1,30 @@
+Version 4
+SymbolType CELL
+LINE Normal -32 32 -12 32
+LINE Normal -32 96 -12 96
+LINE Normal -32 96 -32 32
+LINE Normal 16 48 32 48
+ARC Normal -44 96 20 32 -12 96 -12 32
+WINDOW 0 16 24 Left 2
+WINDOW 38 18 88 Left 2
+SYMATTR Prefix X
+SYMATTR SpiceModel CD4081B
+SYMATTR Description 2-input AND gate
+SYMATTR ModelFile MyLib/Digital/CD4xxx.lib
+SYMATTR SpiceLine vdd=5
+SYMATTR SpiceLine2 speed=2 tripdt=20n
+PIN -16 32 NONE 0
+PINATTR PinName VDD
+PINATTR SpiceOrder 4
+PIN -32 48 NONE 0
+PINATTR PinName A
+PINATTR SpiceOrder 1
+PIN -32 80 NONE 0
+PINATTR PinName B
+PINATTR SpiceOrder 2
+PIN 32 48 NONE 0
+PINATTR PinName Y
+PINATTR SpiceOrder 3
+PIN -16 96 NONE 0
+PINATTR PinName GND
+PINATTR SpiceOrder 5
