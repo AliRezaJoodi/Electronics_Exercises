@@ -1,10 +1,7 @@
 ## Isolated I2C Interfacing With ADuM1251
 
-### Folders and Files Description
-It has included:
-- Hardware (Included hardware layers)
-
-### Schematic: v1.0
+### Schematic
+v1.0  
 ![](Hardware/v1.0.png)
 
 My GitHub: [GitHub.com/AliRezaJoodi](https://github.com/AliRezaJoodi)  

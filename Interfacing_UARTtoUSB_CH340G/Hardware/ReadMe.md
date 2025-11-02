@@ -1,8 +1,5 @@
-### Description
-
-v1.0:
-- Included schematic and PCB layout
-- Last opened with Altium Designer Version 15.0.15
-- Used of SMD components
+### v1.0
 - Made and tested successfully 
-- It's **Best Version**
+- Used of SMD components
+- Included schematic and PCB layout
+- Saved in **Altium Designer Version 15.0.15**
