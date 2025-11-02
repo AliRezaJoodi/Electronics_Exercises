@@ -5,10 +5,10 @@ v1.1
 ![](Pictures/v1.1.jpg)
 
 ### Simulate
-v1.0, Schematic  
+v1.1, Schematic  
 ![](Simulate/v1.0_Schematic.png)
 
-v1.0, Plot  
+v1.1, Plot  
 ![](Simulate/v1.0_Plot.png)
 
 ### More Information
