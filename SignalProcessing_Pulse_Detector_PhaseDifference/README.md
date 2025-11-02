@@ -1,8 +1,8 @@
 ## Phase Detector
 
 ### Picture
-v1.0  
-![](Pictures/v1.0.jpg)
+v1.1  
+![](Pictures/v1.1.jpg)
 
 ### Simulate
 v1.0, Schematic  

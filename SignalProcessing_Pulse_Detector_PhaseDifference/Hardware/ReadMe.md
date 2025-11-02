@@ -1,7 +1,4 @@
-### Description
-
-v1.0:
-- Included schematic and PCB layout
-- Last opened with Altium Designer Version 15.0.15
+### v1.1
 - Made and tested successfully 
-- It's **Best Version**
+- Included schematic and PCB layout
+- Saved in **Altium Designer Version 15.0.15**
