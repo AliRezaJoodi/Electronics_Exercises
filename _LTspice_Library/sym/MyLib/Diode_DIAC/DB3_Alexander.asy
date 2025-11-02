@@ -11,9 +11,10 @@ LINE Normal 28 44 44 20
 LINE Normal 44 20 60 44
 LINE Normal 36 20 64 20
 WINDOW 0 80 16 Left 2
+WINDOW 38 81 39 Left 2
+SYMATTR SpiceModel DB3
 SYMATTR Prefix X
-SYMATTR SpiceModel SIDAC_30
-SYMATTR ModelFile MyLib/DIAC/Littelfuse_DIAC.lib
+SYMATTR ModelFile MyLib/Diode_DIAC/DB3_Alexander.lib
 PIN 32 0 NONE 0
 PINATTR PinName +
 PINATTR SpiceOrder 1
