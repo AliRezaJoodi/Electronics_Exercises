@@ -1,0 +1,828 @@
+* Vishay NTC Thermistors included in this file : TFPT
+* DESCRIPTION: surface mount Nickel thin film RTD’s
+* For power rating and temperature range limitations, see
+* TFPT : www.vishay.com/docs/33017/tfpt.pdf
+* the model is applicable for transient and steady state conditions under bias including self heating.
+* version 2 30 nov 2016: tolerance on V(T) modified with B1
+.SUBCKT TFPT_BASE RN RP PARAMs:  cth=0 gth=0 a=0 b=0  c=0
++  d=0 r25=0  dR25=0 dslope = 0
+R_R6         0 AOUT  10T TC=0,0
+R_R4         0 FTEMP  1 TC=0,0
+B1         T 0  V=(1+(V(dRslo)+1)*dslope*V(tolslop)/100)*V(dRef)
+G_G8         H 0 VALUE { -(V(RP,RN))*(V(RP,RN))/(R25*V(T)*(A+
++  (TEMP+abs(V(H)))*(B+(TEMP+abs(V(H)))*(C+(TEMP+abs(V(H)))*D)))) }
+G_G6         AOUT 0 VALUE { V(AOUT, 0)/(R25*V(T)*(A+
++  (TEMP+abs(V(H)))*(B+(TEMP+abs(V(H)))*(C+(TEMP+abs(V(H)))*D)))) }
+I_I1         0 AOUT DC 1Adc
+R_R2         0 H  1T TC=0,0
+R_R7         0 T  1 TC=0,0
+R_R31        0 dRef {mc(1,DR25/100)}
+I_I31        0 dRef 1
+R_R32        0 dRslo {mc(1.001,1)}
+I_I32        0 dRslo -1
+G_G1         TOLSLOP 0 TABLE { V(FTEMP, 0) }
++ (
++  (-55,4)(-40,3)(-20,2)(0,1)(12,0.5)(25,0)(40,-0.5)(55,-1)(85,-2)(125,-3)(150,-4)
++  )
+G_G11         RP RN VALUE { V(RP, RN)/V(AOUT) }
+G_G2         FTEMP 0 VALUE { -TEMP }
+G_G10         H 0 VALUE { V(H)*Gth }
+C_C1         0 H  { 0.25 * Cth} IC=0 TC=0,0
+C_C2         0 J  {0.75 * Cth} IC=0 TC=0,0
+R_R10        J H 1000 TC=0,0
+R_R3         0 TOLSLOP  1 TC=0,0
+.ENDS
+*$
+.SUBCKT TFPT1206L1002 RN RP PARAMS: TOL25=0 TOLslope=0
+x1 Rn Rp TFPT_BASE Params:
++ cth  =0.45
++ gth =0.0055
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =10000
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT1206L8201 RN RP PARAMS: TOL25=0 TOLslope=0
+x2 Rn Rp TFPT_BASE Params:
++ cth  =0.45
++ gth =0.0055
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =8200
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT1206L6801 RN RP PARAMS: TOL25=0 TOLslope=0
+x3 Rn Rp TFPT_BASE Params:
++ cth  =0.45
++ gth =0.0055
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =6800
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT1206L5601 RN RP PARAMS: TOL25=0 TOLslope=0
+x4 Rn Rp TFPT_BASE Params:
++ cth  =0.45
++ gth =0.0055
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =5600
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT1206L5001 RN RP PARAMS: TOL25=0 TOLslope=0
+x5 Rn Rp TFPT_BASE Params:
++ cth  =0.45
++ gth =0.0055
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =5000
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT1206L4701 RN RP PARAMS: TOL25=0 TOLslope=0
+x6 Rn Rp TFPT_BASE Params:
++ cth  =0.45
++ gth =0.0055
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =4700
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT1206L3901 RN RP PARAMS: TOL25=0 TOLslope=0
+x7 Rn Rp TFPT_BASE Params:
++ cth  =0.45
++ gth =0.0055
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =3900
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT1206L3301 RN RP PARAMS: TOL25=0 TOLslope=0
+x8 Rn Rp TFPT_BASE Params:
++ cth  =0.45
++ gth =0.0055
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =3300
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT1206L2701 RN RP PARAMS: TOL25=0 TOLslope=0
+x9 Rn Rp TFPT_BASE Params:
++ cth  =0.45
++ gth =0.0055
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =2700
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT1206L2201 RN RP PARAMS: TOL25=0 TOLslope=0
+x10 Rn Rp TFPT_BASE Params:
++ cth  =0.45
++ gth =0.0055
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =2200
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT1206L1801 RN RP PARAMS: TOL25=0 TOLslope=0
+x11 Rn Rp TFPT_BASE Params:
++ cth  =0.45
++ gth =0.0055
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =1800
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT1206L1501 RN RP PARAMS: TOL25=0 TOLslope=0
+x12 Rn Rp TFPT_BASE Params:
++ cth  =0.45
++ gth =0.0055
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =1500
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT1206L1201 RN RP PARAMS: TOL25=0 TOLslope=0
+x13 Rn Rp TFPT_BASE Params:
++ cth  =0.45
++ gth =0.0055
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =1200
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT1206L1001 RN RP PARAMS: TOL25=0 TOLslope=0
+x14 Rn Rp TFPT_BASE Params:
++ cth  =0.45
++ gth =0.0055
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =1000
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT1206L8200 RN RP PARAMS: TOL25=0 TOLslope=0
+x15 Rn Rp TFPT_BASE Params:
++ cth  =0.45
++ gth =0.0055
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =820
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT1206L6800 RN RP PARAMS: TOL25=0 TOLslope=0
+x16 Rn Rp TFPT_BASE Params:
++ cth  =0.45
++ gth =0.0055
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =680
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT1206L5600 RN RP PARAMS: TOL25=0 TOLslope=0
+x17 Rn Rp TFPT_BASE Params:
++ cth  =0.45
++ gth =0.0055
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =560
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT1206L4700 RN RP PARAMS: TOL25=0 TOLslope=0
+x18 Rn Rp TFPT_BASE Params:
++ cth  =0.45
++ gth =0.0055
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =470
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT1206L3900 RN RP PARAMS: TOL25=0 TOLslope=0
+x19 Rn Rp TFPT_BASE Params:
++ cth  =0.45
++ gth =0.0055
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =390
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT1206L3300 RN RP PARAMS: TOL25=0 TOLslope=0
+x20 Rn Rp TFPT_BASE Params:
++ cth  =0.45
++ gth =0.0055
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =330
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT1206L2700 RN RP PARAMS: TOL25=0 TOLslope=0
+x21 Rn Rp TFPT_BASE Params:
++ cth  =0.45
++ gth =0.0055
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =270
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT1206L2200 RN RP PARAMS: TOL25=0 TOLslope=0
+x22 Rn Rp TFPT_BASE Params:
++ cth  =0.45
++ gth =0.0055
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =220
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT1206L1800 RN RP PARAMS: TOL25=0 TOLslope=0
+x23 Rn Rp TFPT_BASE Params:
++ cth  =0.45
++ gth =0.0055
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =180
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT1206L1500 RN RP PARAMS: TOL25=0 TOLslope=0
+x24 Rn Rp TFPT_BASE Params:
++ cth  =0.45
++ gth =0.0055
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =150
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT1206L1200 RN RP PARAMS: TOL25=0 TOLslope=0
+x25 Rn Rp TFPT_BASE Params:
++ cth  =0.45
++ gth =0.0055
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =120
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT1206L1000 RN RP PARAMS: TOL25=0 TOLslope=0
+x26 Rn Rp TFPT_BASE Params:
++ cth  =0.4
++ gth =0.0055
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =100
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0805L5001 RN RP PARAMS: TOL25=0 TOLslope=0
+x27 Rn Rp TFPT_BASE Params:
++ cth  =0.2
++ gth =0.00445
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =5000
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0805L4701 RN RP PARAMS: TOL25=0 TOLslope=0
+x28 Rn Rp TFPT_BASE Params:
++ cth  =0.2
++ gth =0.00445
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =4700
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0805L3901 RN RP PARAMS: TOL25=0 TOLslope=0
+x29 Rn Rp TFPT_BASE Params:
++ cth  =0.2
++ gth =0.00445
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =3900
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0805L3301 RN RP PARAMS: TOL25=0 TOLslope=0
+x30 Rn Rp TFPT_BASE Params:
++ cth  =0.2
++ gth =0.00445
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =3300
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0805L2701 RN RP PARAMS: TOL25=0 TOLslope=0
+x31 Rn Rp TFPT_BASE Params:
++ cth  =0.2
++ gth =0.00445
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =2700
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0805L2201 RN RP PARAMS: TOL25=0 TOLslope=0
+x32 Rn Rp TFPT_BASE Params:
++ cth  =0.2
++ gth =0.00445
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =2200
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0805L1801 RN RP PARAMS: TOL25=0 TOLslope=0
+x33 Rn Rp TFPT_BASE Params:
++ cth  =0.2
++ gth =0.00445
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =1800
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0805L1501 RN RP PARAMS: TOL25=0 TOLslope=0
+x34 Rn Rp TFPT_BASE Params:
++ cth  =0.2
++ gth =0.00445
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =1500
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0805L1201 RN RP PARAMS: TOL25=0 TOLslope=0
+x35 Rn Rp TFPT_BASE Params:
++ cth  =0.2
++ gth =0.00445
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =1200
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0805L1001 RN RP PARAMS: TOL25=0 TOLslope=0
+x36 Rn Rp TFPT_BASE Params:
++ cth  =0.2
++ gth =0.00445
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =1000
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0805L8200 RN RP PARAMS: TOL25=0 TOLslope=0
+x37 Rn Rp TFPT_BASE Params:
++ cth  =0.2
++ gth =0.00445
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =820
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0805L6800 RN RP PARAMS: TOL25=0 TOLslope=0
+x38 Rn Rp TFPT_BASE Params:
++ cth  =0.2
++ gth =0.00445
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =680
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0805L5600 RN RP PARAMS: TOL25=0 TOLslope=0
+x39 Rn Rp TFPT_BASE Params:
++ cth  =0.2
++ gth =0.00445
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =560
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0805L4700 RN RP PARAMS: TOL25=0 TOLslope=0
+x40 Rn Rp TFPT_BASE Params:
++ cth  =0.2
++ gth =0.00445
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =470
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0805L3900 RN RP PARAMS: TOL25=0 TOLslope=0
+x41 Rn Rp TFPT_BASE Params:
++ cth  =0.2
++ gth =0.00445
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =390
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0805L3300 RN RP PARAMS: TOL25=0 TOLslope=0
+x42 Rn Rp TFPT_BASE Params:
++ cth  =0.2
++ gth =0.00445
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =330
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0805L2700 RN RP PARAMS: TOL25=0 TOLslope=0
+x43 Rn Rp TFPT_BASE Params:
++ cth  =0.2
++ gth =0.00445
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =270
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0805L2200 RN RP PARAMS: TOL25=0 TOLslope=0
+x44 Rn Rp TFPT_BASE Params:
++ cth  =0.2
++ gth =0.00445
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =220
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0805L1800 RN RP PARAMS: TOL25=0 TOLslope=0
+x45 Rn Rp TFPT_BASE Params:
++ cth  =0.2
++ gth =0.00445
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =180
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0805L1500 RN RP PARAMS: TOL25=0 TOLslope=0
+x46 Rn Rp TFPT_BASE Params:
++ cth  =0.2
++ gth =0.00445
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =150
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0805L1200 RN RP PARAMS: TOL25=0 TOLslope=0
+x47 Rn Rp TFPT_BASE Params:
++ cth  =0.2
++ gth =0.00445
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =120
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0805L1000 RN RP PARAMS: TOL25=0 TOLslope=0
+x48 Rn Rp TFPT_BASE Params:
++ cth  =0.2
++ gth =0.00445
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =100
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0603L1001 RN RP PARAMS: TOL25=0 TOLslope=0
+x49 Rn Rp TFPT_BASE Params:
++ cth  =0.04
++ gth =0.0031
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =1000
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0603L8200 RN RP PARAMS: TOL25=0 TOLslope=0
+x50 Rn Rp TFPT_BASE Params:
++ cth  =0.04
++ gth =0.0031
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =820
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0603L6800 RN RP PARAMS: TOL25=0 TOLslope=0
+x51 Rn Rp TFPT_BASE Params:
++ cth  =0.04
++ gth =0.0031
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =680
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0603L5600 RN RP PARAMS: TOL25=0 TOLslope=0
+x52 Rn Rp TFPT_BASE Params:
++ cth  =0.04
++ gth =0.0031
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =560
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0603L4700 RN RP PARAMS: TOL25=0 TOLslope=0
+x53 Rn Rp TFPT_BASE Params:
++ cth  =0.04
++ gth =0.0031
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =470
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0603L3900 RN RP PARAMS: TOL25=0 TOLslope=0
+x54 Rn Rp TFPT_BASE Params:
++ cth  =0.04
++ gth =0.0031
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =390
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0603L3300 RN RP PARAMS: TOL25=0 TOLslope=0
+x55 Rn Rp TFPT_BASE Params:
++ cth  =0.04
++ gth =0.0031
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =330
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0603L2700 RN RP PARAMS: TOL25=0 TOLslope=0
+x56 Rn Rp TFPT_BASE Params:
++ cth  =0.04
++ gth =0.0031
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =270
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0603L2200 RN RP PARAMS: TOL25=0 TOLslope=0
+x57 Rn Rp TFPT_BASE Params:
++ cth  =0.04
++ gth =0.0031
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =220
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0603L1800 RN RP PARAMS: TOL25=0 TOLslope=0
+x58 Rn Rp TFPT_BASE Params:
++ cth  =0.04
++ gth =0.0031
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =180
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0603L1500 RN RP PARAMS: TOL25=0 TOLslope=0
+x59 Rn Rp TFPT_BASE Params:
++ cth  =0.04
++ gth =0.0031
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =150
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0603L1200 RN RP PARAMS: TOL25=0 TOLslope=0
+x60 Rn Rp TFPT_BASE Params:
++ cth  =0.04
++ gth =0.0031
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =120
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$
+.SUBCKT TFPT0603L1000 RN RP PARAMS: TOL25=0 TOLslope=0
+x61 Rn Rp TFPT_BASE Params:
++ cth  =0.04
++ gth =0.0031
++ a =0.90014
++ b =0.00387235
++ c =0.00000486825
++ d =0.00000000137559
++ r25 =100
++ dR25={TOL25}
++ dslope={TOLslope}
+.ENDS
+*$

@@ -1,0 +1,236 @@
+* Library of Vishay NTC Thermistors for LTspice XVII
+*
+*
+* $Revision:   3.0  $
+* $Author:   Alain Stas  $
+* $Date:   19 Oct 2021 $
+* $Revision History : addition of NTCS0402E3103_L1T
+* addition of 0603/0805 1K/1K5/5K
+* 11/03/2024 addition of NTCSC0402 10K/47K/100K
+*---------------------------------------------------------------
+*
+* Vishay NTC Thermistors included in this file : NTCLE100/NTCLE101/NTCLE201/NTCLE203/NTCS
+* DESCRIPTION: through hole and surface mount NTC thermistors
+* For power rating and temperature range limitations, see
+* NTCLE100 : http://www.vishay.com/thermistors/list/product-29049/
+* NTCLE101 : http://www.vishay.com/thermistors/list/product-29046/ and 29152
+* NTCLE203 :http://www.vishay.com/thermistors/list/product-29048/ and 29118
+* NTCS0402:http://www.vishay.com/thermistors/list/product-29003/
+* NTCS0603:http://www.vishay.com/thermistors/list/product-29056/
+* NTCS0805:http://www.vishay.com/thermistors/list/product-29044/
+* NTCSC0402:http://www.vishay.com/thermistors/list/product-29238/
+* or use the search engine of Vishay for visualizing particular data sheet at http://www.vishay.com/
+*
+* the model is applicable for transient and steady states conditions under bias including self heating.
+* tolerances TolB on Steinhart & Hart coef. are valid only between 25 and 85 C,and are only given for information outside this range
+* the tolerances on R25 and B25/85 are simulated by the values of R2 and R3 under the form of a random distribution using the LT spice MC function
+*$
+.SUBCKT NTC_BASE Rn Rp Params:W=1 X=1 Y=1 Z=1 GTH=1 GTH1=1 CTH=1 A=1 R25=1 B=1 C=1 D=1 T0=273.15
+R2 tR 0 {mc(1,tolR/100)}
+R3 tB 0 {mc(1,tolB/100)}
+I1 tR 0 -1
+I2 tB 0 -1
+G_G1         AOUT 0 VALUE { if(TEMP>25,V(AOUT,
++  0)/(R25*V(TR)*exp(((D*v(TB)/(T0+abs(V(H))+TEMP)+C*V(TB))/(T0+abs(V(H))+TEMP)+B*v(TB))/(T0+TEMP+abs(V(H)))+A*v(TB))),0)
++  }
+G_G2         AOUT 0 VALUE { IF(TEMP>25,0,V(AOUT,
++  0)/(R25*v(TR)*exp(((Z*v(TB)/(T0+abs(V(H))+TEMP)+Y*v(TB))/(T0+abs(V(H))+TEMP)+X*v(TB))/(T0+abs(V(H))+TEMP)+W*v(TB))))
++  }
+G_G3         H 0 VALUE {
++  if(TEMP>25,-V(RP,RN)*V(RP,RN)/(R25*v(TR)*exp(((D*v(TB)/(T0+abs(V(H))+TEMP)+C*v(TB))/(T0+abs(V(H))+TEMP)+B*v(TB))/
++  (T0+TEMP+abs(V(H)))+A*v(TB))),0)}
+G_G4         H 0 VALUE {
++  if(TEMP>25,0,-V(RP,RN)*V(RP,RN)/(R25*v(TR)*exp(((Z*v(TB)/(T0+abs(V(H))+TEMP)+Y*v(TB))/(T0+abs(V(H))+TEMP)+X*v(TB))/
++  (T0+TEMP+abs(V(H)))+W*v(TB))))}
+G_G5         RP RN VALUE { V(RP, RN)/V(AOUT) }
+G_G6         H 0 VALUE { V(H)*(Gth + Gth1*(TEMP-25)) }
+I_I1         0 AOUT DC 1Adc
+R_R1         0 AOUT  1T TC=0,0
+R_R2         0 H  1T TC=0,0
+C_C1         0 H  {Cth}
+.IC V(H)=0
+.ENDS
+*$
+
+*$
+.SUBCKT NTCS0402E3103_L1T RN Rp  PARAMS: TR=0 TB=0
+X114 Rn Rp NTC_BASE Params:
++ w=-11.1423334705573
++ x=2844.16925014123
++ y=241416.837060782
++ z=-29494710.26406
++ gth=0.0023 gth1 = 0.0000133
++ cth=0.0042
++ a=-11.1423334705573
++ r25=10000
++ b=2844.16925014123
++ c=241416.837060782
++ d=-29494710.26406
++ T0=273.15
++ TOLR=TR
++ TOLB=TB
+.ENDS
+*$
+.SUBCKT NTCS0603E3102_LT RN Rp PARAMS: TR=0 TB=0
+X115 Rn Rp NTC_BASE Params:
++ w=-9.24244884738525
++ x=1841.20084276919
++ Y=421961.783677252
++ Z=-44520624.0135324
++ gth=0.0031 gth1 = 0.00002
++ cth=0.0081
++ A=-9.24244884738525
++ R25=1000
++ B=1841.20084276919
++ C=421961.783677252
++ D=-44520624.0135324
++ T0=273.15
++ TOLR=TR
++ TOLB=TB
+.ENDS
+*$
+.SUBCKT NTCS0603E3152_LT RN Rp PARAMS: TR=0 TB=0
+X116 Rn Rp NTC_BASE Params:
++ w=-10.7101477067117
++ x=2899.36073524891
++ Y=155540.012245028
++ Z=-20251162.0477002
++ gth=0.0031 gth1 = 0.00002
++ cth=0.0081
++ A=-10.7101477067117
++ R25=1500
++ B=2899.36073524891
++ C=155540.012245028
++ D=-20251162.0477002
++ T0=273.15
++ TOLR=TR
++ TOLB=TB
+.ENDS
+*$
+.SUBCKT NTCS0805E3502_LT RN Rp PARAMS:TR=0 TB=0
+X117 Rn Rp NTC_BASE Params:
++ w=-10.8748489695554
++ x=2633.19491348966
++ Y=297530.667064886
++ Z=-34560112.9600088
++ gth=0.0048 gth1 = 0.0000267
++ cth=0.03216
++ A=-10.8748489695554
++ R25=5000
++ B=2633.19491348966
++ C=297530.667064886
++ D=-34560112.9600088
++ T0=273.15
++ TOLR=TR
++ TOLB=TB
+.ENDS
+*$
+.SUBCKT NTCS0603E3502_LT RN Rp PARAMS: TR=0 TB=0
+X118 Rn Rp NTC_BASE Params:
++ w=-12.746624791546
++ x=4159.15844734518
++ Y=-112818.729029691
++ Z=1746187.32843333
++ gth=0.0031 gth1 = 0.00002
++ cth=0.03216
++ A=-10.5178999769643
++ R25=5000
++ B=2129.00418980746
++ C=512792.147016091
++ D=-63381508.0761232
++ T0=273.15
++ TOLR=TR
++ TOLB=TB
+.ENDS
+*$
+.SUBCKT NTCS0805E3152_LT RN Rp PARAMS:TR=0 TB=0
+X119 Rn Rp NTC_BASE Params:
++ w=-11.4184510941507
++ x=3217.25238428639
++ Y=116125.772409905
++ Z=-17985711.922342
++ gth=0.0048 gth1 = 0.0000267
++ cth=0.0081
++ A=-11.4184510941507
++ R25=1500
++ B=3217.25238428639
++ C=116125.772409905
++ D=-17985711.922342
++ T0=273.15
++ TOLR=TR
++ TOLB=TB
+.ENDS
+*$
+.SUBCKT NTCS0805E3102_LT RN Rp PARAMS: TR=0 TB=0
+X119 Rn Rp NTC_BASE Params:
++ w=-11.7849424099388
++ x=3586.11774591627
++ Y=208.008759180584
++ Z=-6501205.44842637
++ gth=0.0048 gth1 = 0.0000267
++ cth=0.03216
++ A=-10.6277652219847
++ R25=1000
++ B=2543.7919491973
++ C=323716.786442856
++ D=-40968771.2220251
++ T0=273.15
++ TOLR=TR
++ TOLB=TB
+.ENDS
+$
+.SUBCKT NTCSC0402E3103_LFT RN Rp  PARAMS: TR=0 TB=0
+X120 Rn Rp NTC_BASE Params:
++ w=-25.93273595
++ x=15037.58474
++ y=-3002631.898
++ z=245802510.8
++ gth=0.0023 gth1 = 0.0000133
++ cth=0.0042
++ a=-11.78633398
++ R25=10000
++ b=2924.731541
++ c=420851.773
++ d=-73084463.23
++ T0=273.15
++ TOLR=TR
++ TOLB=TB
+.ENDS
+*$
+.SUBCKT NTCSC0402E3473_XHT RN Rp  PARAMS: TR=0 TB=0
+X121 Rn Rp NTC_BASE Params:
++ w=-23.36681733
++ x=11944.97635
++ y=-2031599.594
++ z=163195760.4
++ gth=0.0023 gth1 = 0.0000133
++ cth=0.0042
++ a=-12.33884702
++ R25=47000
++ b=1759.933563
++ c=1099682.704
++ d=-157293394.3
++ T0=273.15
++ TOLR=TR
++ TOLB=TB
+.ENDS
+*$
+.SUBCKT NTCSC0402E3104_XHT RN Rp  PARAMS: TR=0 TB=0
+X122 Rn Rp NTC_BASE Params:
++ w=-23.45938081
++ x=12026.39705
++ y=-2054767.643
++ z=165318811.8
++ gth=0.0023 gth1 = 0.0000133
++ cth=0.0042
++ a=-12.39462945
++ R25=100000
++ b=1821.677598
++ c=1077231.893
++ d=-154609964.4
++ T0=273.15
++ TOLR=TR
++ TOLB=TB
+.ENDS
+*$
+

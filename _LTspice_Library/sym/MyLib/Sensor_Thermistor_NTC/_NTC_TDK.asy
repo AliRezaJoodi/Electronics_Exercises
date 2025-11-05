@@ -1,0 +1,19 @@
+Version 4
+SymbolType BLOCK
+LINE Normal -31 -35 -31 -35
+LINE Normal -29 25 -47 25
+LINE Normal 31 -24 -29 25
+RECTANGLE Normal 48 16 -48 -16
+TEXT -10 -28 Left 2 -t°
+WINDOW 0 3 -43 Bottom 2
+WINDOW 38 -48 39 Left 0
+SYMATTR SpiceModel B57221V2103A160
+SYMATTR Prefix X
+SYMATTR ModelFile MyLib/Sensor_Thermistor_NTC/_NTC_TDK.lib
+SYMATTR SpiceLine TOL=0
+PIN -48 0 NONE 8
+PINATTR PinName RN
+PINATTR SpiceOrder 1
+PIN 48 0 NONE 8
+PINATTR PinName Rp
+PINATTR SpiceOrder 2

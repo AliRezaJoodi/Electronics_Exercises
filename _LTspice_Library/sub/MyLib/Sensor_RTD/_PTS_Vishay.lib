@@ -1,0 +1,120 @@
+*
+*$
+* Library of Vishay PTS RTD’s for LT spice 4
+*
+*
+* $Revision:   1.1  $
+* $Author:   Alain Stas  $
+* $Date:   25 May 2016 $
+* $Revision History :
+*---------------------------------------------------------------
+*
+* Vishay NTC Thermistors included in this file : PTS
+* DESCRIPTION: surface mount Platinum thin film RTD’s
+* For power rating and temperature range limitations, see
+* PTS : http://www.vishay.com/docs/28762/ptsserie.pdf
+* PTS AT: http://www.vishay.com/docs/28899/ptsat.pdf
+*
+* the model is applicable for transient and steady state conditions under bias including self heating.
+*
+*
+.SUBCKT PTS_BASE Rn Rp PARAMS:  cth=1 r0=1 gth=1 a=1 b=1 c=1 F1=0 F2=0
+R2 t0 0 {mc(1,F1)}
+R3 tS 0 {mc(1,F2)}
+I1 t0 0 -1
+I2 tS 0 -1
+G_G5         RP RN VALUE { V(RP, RN)/V(AOUT) }
+R_R1         0 AOUT  10T TC=0,0
+G_G6         H 0 VALUE { +V(H)*Gth }
+R_R2         0 H  1T TC=0,0
+G_G2         AOUT 0 VALUE { IF(TEMP>0,0,V(AOUT,
++  0)/(R0*(1+(abs(V(H))+V(DT)+TEMP)*(A+(abs(V(H))+V(DT)+TEMP)*(B+C*(abs(V(H))+V(DT)+TEMP-100)*(abs(V(H))+V(DT)+TEMP))))))
++  }
+G_G1         AOUT 0 VALUE { if(TEMP>0,V(AOUT,
++  0)/(R0*(1+(abs(V(H))+V(DT)+TEMP)*(A+B*(abs(V(H))+V(DT)+TEMP)))),0) }
+R_R4         0 DT  1 TC=0,0
+G_G4         H 0 VALUE {
++  if(TEMP>0,0,-V(RP,RN)*V(RP,RN)/(R0*(1+(abs(V(H))+TEMP)*(A+(abs(V(H))+TEMP)*(B+C*((abs(V(H))+TEMP)-100)*(abs(V(H))+TEMP))))))
++  }
+I_I1         0 AOUT DC 1Adc
+G_G3         H 0 VALUE {
++  if(TEMP>0,-V(RP,RN)*V(RP,RN)/(R0*(1+(abs(V(H))+TEMP)*(A+B*(abs(V(H))+TEMP)))),0)
++  }
+C_C1         0 H  {+0.25* Cth }
+C_C2         0 J  {0.75 * Cth}
+R_R10        J H 700 TC=0,0
+G_G7         DT 0 VALUE { -(V(T0)-1) - (V(tS)-1) *abs(V(H)+TEMP) }
+.IC V(H)=0
+.ENDS
+*$
+.SUBCKT PTS12060__1K00 Rn Rp PARAMS: TOL0= 0  TOLS = 0
+X1 Rn Rp PTS_BASE Params:
++ cth=0.25
++ r0=1000
++ gth=0.00581
++ a=0.0039083
++ b=-0.0000005775
++ c=-0.000000000004183
++ F1= {TOL0}
++ F2= {TOLS}
+.ENDS
+*$
+.SUBCKT PTS12060__500R Rn Rp PARAMS: TOL0= 0  TOLS = 0
+X4 Rn Rp PTS_BASE Params:
++ cth=0.25
++ r0=500
++ gth=0.00581
++ a=0.0039083
++ b=-0.0000005775
++ c=-0.000000000004183
++ F1= {TOL0}
++ F2= {TOLS}
+.ENDS
+*$
+.SUBCKT PTS08050__500R Rn Rp PARAMS: TOL0= 0  TOLS = 0
+X5 Rn Rp PTS_BASE Params:
++ cth=0.1
++ r0=500
++ gth=0.0046
++ a=0.0039083
++ b=-0.0000005775
++ c=-0.000000000004183
++ F1= {TOL0}
++ F2= {TOLS}
+.ENDS
+*$
+.SUBCKT PTS12060__100R Rn Rp PARAMS: TOL0= 0  TOLS = 0
+X7 Rn Rp PTS_BASE Params:
++ cth=0.25
++ r0=100
++ gth=0.00581
++ a=0.0039083
++ b=-0.0000005775
++ c=-0.000000000004183
++ F1= {TOL0}
++ F2= {TOLS}
+.ENDS
+*$
+.SUBCKT PTS08050__100R Rn Rp PARAMS: TOL0= 0  TOLS = 0
+X8 Rn Rp PTS_BASE Params:
++ cth=0.1
++ r0=100
++ gth=0.0046
++ a=0.0039083
++ b=-0.0000005775
++ c=-0.000000000004183
++ F1= {TOL0}
++ F2= {TOLS}
+.ENDS
+*$
+.SUBCKT PTS06030__100R Rn Rp PARAMS: TOL0= 0  TOLS = 0
+X9 Rn Rp PTS_BASE Params:
++ cth=0.025
++ r0=100
++ gth=0.00314
++ a=0.0039083
++ b=-0.0000005775
++ c=-0.000000000004183
++ F1= {TOL0}
++ F2= {TOLS}
+.ENDS
