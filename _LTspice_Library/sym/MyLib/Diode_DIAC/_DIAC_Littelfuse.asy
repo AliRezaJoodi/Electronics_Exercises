@@ -14,7 +14,7 @@ WINDOW 0 80 16 Left 2
 WINDOW 38 80 41 Left 2
 SYMATTR SpiceModel SIDAC_30
 SYMATTR Prefix X
-SYMATTR ModelFile MyLib/Diode_DIAC/DIAC_Littelfuse.lib
+SYMATTR ModelFile MyLib/Diode_DIAC/_DIAC_Littelfuse.lib
 PIN 32 0 NONE 0
 PINATTR PinName +
 PINATTR SpiceOrder 1

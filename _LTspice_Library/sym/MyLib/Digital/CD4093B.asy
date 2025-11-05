@@ -16,7 +16,7 @@ SYMATTR Prefix X
 SYMATTR Description 2-input NAND SCHMITT trigger
 SYMATTR SpiceLine vdd=5
 SYMATTR SpiceLine2 speed=3 tripdt=40n
-SYMATTR ModelFile MyLib/Digital/CD4xxx.lib
+SYMATTR ModelFile MyLib/Digital/_CD4xxx.lib
 PIN -32 48 NONE 0
 PINATTR PinName A
 PINATTR SpiceOrder 1

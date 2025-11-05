@@ -16,7 +16,7 @@ WINDOW 38 16 64 Left 2
 SYMATTR SpiceModel CD40106B
 SYMATTR Prefix X
 SYMATTR Description Inverting buffer with Schmitt trigger input
-SYMATTR ModelFile MyLib/Digital/CD4xxx.lib
+SYMATTR ModelFile MyLib/Digital/_CD4xxx.lib
 SYMATTR SpiceLine vdd=5
 SYMATTR SpiceLine2 speed=2 tripdt=100n
 PIN 0 32 NONE 0
