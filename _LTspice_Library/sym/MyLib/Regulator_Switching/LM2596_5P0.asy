@@ -1,0 +1,25 @@
+Version 4
+SymbolType CELL
+RECTANGLE Normal -128 -64 128 96
+TEXT 0 0 Center 0 LT
+WINDOW 0 -127 -104 Left 2
+WINDOW 38 -127 -80 Left 2
+SYMATTR SpiceModel LM2596_5P0
+SYMATTR Prefix X
+SYMATTR ModelFile MyLib/Regulator_Switching/LM2596_5P0.lib
+SYMATTR Description Switching Regulator, 150 KHz
+PIN -128 0 LEFT 8
+PINATTR PinName IN
+PINATTR SpiceOrder 1
+PIN 80 96 BOTTOM 8
+PINATTR PinName FB
+PINATTR SpiceOrder 2
+PIN 128 0 RIGHT 8
+PINATTR PinName OUT
+PINATTR SpiceOrder 3
+PIN 0 96 BOTTOM 8
+PINATTR PinName GND
+PINATTR SpiceOrder 4
+PIN -80 96 BOTTOM 8
+PINATTR PinName _ON
+PINATTR SpiceOrder 5

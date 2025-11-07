@@ -2,17 +2,17 @@ Version 4
 SymbolType CELL
 RECTANGLE Normal -128 -64 128 96
 TEXT 0 0 Center 0 LT
-WINDOW 0 -128 -80 Left 2
-WINDOW 38 32 112 Left 2
-SYMATTR SpiceModel LM7815
+WINDOW 0 -128 -105 Left 2
+WINDOW 38 -127 -80 Left 2
+SYMATTR SpiceModel LM317
 SYMATTR Prefix X
-SYMATTR Description Voltage regulator 7815 (+15V)
-SYMATTR ModelFile MyLib/Regulator/LM7815.lib
+SYMATTR ModelFile MyLib/Regulator_Linear/LM317.lib
+SYMATTR Description 3-Terminal Adjustable Regulator
 PIN -128 0 LEFT 8
 PINATTR PinName IN
 PINATTR SpiceOrder 1
 PIN 0 96 BOTTOM 8
-PINATTR PinName GND
+PINATTR PinName ADJ
 PINATTR SpiceOrder 2
 PIN 128 0 RIGHT 8
 PINATTR PinName OUT

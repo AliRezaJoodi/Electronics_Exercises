@@ -2,12 +2,12 @@ Version 4
 SymbolType CELL
 RECTANGLE Normal -128 -64 128 96
 TEXT 0 0 Center 0 LT
-WINDOW 0 -128 -80 Left 2
-WINDOW 38 32 112 Left 2
-SYMATTR SpiceModel LM7805
+WINDOW 0 -128 -104 Left 2
+WINDOW 38 -128 -80 Left 2
+SYMATTR SpiceModel LM7815
 SYMATTR Prefix X
-SYMATTR Description Voltage regulator 7805 (+5V)
-SYMATTR ModelFile MyLib/Regulator/LM7805.lib
+SYMATTR Description Voltage regulator 7815 (+15V)
+SYMATTR ModelFile MyLib/Regulator_Linear/LM7815.lib
 PIN -128 0 LEFT 8
 PINATTR PinName IN
 PINATTR SpiceOrder 1
