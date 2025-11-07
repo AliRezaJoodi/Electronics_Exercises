@@ -4,10 +4,10 @@ RECTANGLE Normal -128 -64 128 96
 TEXT 0 0 Center 0 LT
 WINDOW 0 -127 -104 Left 2
 WINDOW 38 -127 -80 Left 2
-SYMATTR SpiceModel LM2596_5P0
+SYMATTR SpiceModel LM2596_3P3_TRANS
 SYMATTR Prefix X
-SYMATTR ModelFile MyLib/Regulator_Switching/LM2596_5P0.lib
-SYMATTR Description Switching Regulator, 150 KHz
+SYMATTR ModelFile MyLib/Regulator_Switching/LM2596_3P3_TRANS.lib
+SYMATTR Description Switching Regulator, Step-Down, 150 KHz
 PIN -128 0 LEFT 8
 PINATTR PinName IN
 PINATTR SpiceOrder 1
