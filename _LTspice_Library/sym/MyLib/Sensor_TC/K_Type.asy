@@ -1,0 +1,20 @@
+Version 4
+SymbolType CELL
+RECTANGLE Normal -128 -64 128 96
+WINDOW 0 -128 -105 Left 2
+WINDOW 38 -127 -80 Left 2
+SYMATTR SpiceModel TC_K
+SYMATTR Prefix X
+SYMATTR ModelFile MyLib/Sensor_TC/K_Type.lib
+PIN -128 -32 LEFT 8
+PINATTR PinName Tjunc
+PINATTR SpiceOrder 1
+PIN -128 64 LEFT 8
+PINATTR PinName Tref
+PINATTR SpiceOrder 2
+PIN 128 -32 RIGHT 8
+PINATTR PinName Vtc+
+PINATTR SpiceOrder 3
+PIN 128 64 RIGHT 8
+PINATTR PinName Vtc-
+PINATTR SpiceOrder 4
