@@ -1,0 +1,12 @@
+* K-Type thermocouple subcircuit for LTSpice
+* Using reference function on ITS-90 (International Temperature Scale of 1990)
+*Temperature range:	0.000 to 1372.000 degC
+*
+*                   Tjunc = Input voltage representing the thermocouple junction temperature
+*                   | Tref = Input voltage representing the cold-junction temperature
+*                   | | Vtc+ =
+*                   | | | Vtc- =
+*                   | | | |
+.SUBCKT TC_K_LINEAR 1 2 3 4
+E_TC 3 4 VALUE = { (V(1) - V(2)) * 0.000041276 }
+.ENDS TC_K_LINEAR

@@ -18,9 +18,9 @@ TEXT 16 -32 Left 2 Cu
 TEXT 16 48 Left 2 Cu
 WINDOW 0 -304 -87 Left 2
 WINDOW 38 -304 -64 Left 2
-SYMATTR SpiceModel TC_K
+SYMATTR SpiceModel TC_K_LINEAR
 SYMATTR Prefix X
-SYMATTR ModelFile MyLib/Sensor_TC/K_Type.lib
+SYMATTR ModelFile MyLib/Sensor_TC/K_Type_linear.lib
 PIN -272 128 BOTTOM 8
 PINATTR PinName Tjunc
 PINATTR SpiceOrder 1
