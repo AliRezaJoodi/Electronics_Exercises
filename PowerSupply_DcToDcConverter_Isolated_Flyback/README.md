@@ -1,6 +1,6 @@
-## Flyback Power Supply
+## DC-DC Converter, Buck, Isolated, Flyback, Dual, 12V, Low Power
 
-### Picture
+### Photo
 v1.0  
 ![](Pictures/v1.0.jpg)
 

@@ -14,7 +14,7 @@ WINDOW 0 80 16 Left 2
 WINDOW 38 80 39 Left 2
 SYMATTR SpiceModel SMDB3
 SYMATTR Prefix X
-SYMATTR ModelFile MyLib/Diode_DIAC/DIAC_ST.lib
+SYMATTR ModelFile MyLib/Diode_DIAC/_DIAC_ST.lib
 PIN 32 0 NONE 0
 PINATTR PinName +
 PINATTR SpiceOrder 1
