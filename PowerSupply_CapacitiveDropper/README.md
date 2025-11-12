@@ -1,24 +1,16 @@
 ﻿## Capacitive Power Supply
 Note: $Xc={{1\over 2πfC}}$ (`f` is frequency and `C` is the capacitance)  
 
-### Folders
-- `Hardware` — Schematic files
-- `Pictures` — Project photos
-- `Simulate` — Simulation files
+F=50Hz, C=470nF => Xc=6K77  
+F=50Hz, C=680nF => Xc=4K68  
+F=50Hz, C=1uF => Xc=3K18  
 
-### 12V/40mA Load
+### Simulate
 v1.0, Schematic  
-![](Simulate_12V40mA/v1.0_Schematic.png)
+![](Simulate/v1.0_Schematic.png)
 
 v1.0, Plot  
-![](Simulate_12V40mA/v1.0_Plot.png)
-
-### 24V/500mA Load
-v1.0, photo  
-![](Pictures_24V500mA/v1.0.jpg)
-
-v1.0, Schematic  
-![](Hardware_24V500mA/v1.0.png)
+![](Simulate/v1.0_Plot.png)
 
 ### Source
 [Capacitor Impedance Calculator](https://www.allaboutcircuits.com/tools/capacitor-impedance-calculator/)
