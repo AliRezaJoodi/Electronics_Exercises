@@ -1,10 +1,6 @@
 ## IGBT Gate Protection
 ![](Help.png)  
 
-### Folders
-- `Hardware` — Included hardware layers
-- `Pictures` — Included photos
-
 ### Picture
 v1.0  
 ![](Pictures/v1.0.jpg)

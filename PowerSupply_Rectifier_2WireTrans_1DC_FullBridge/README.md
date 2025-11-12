@@ -1,10 +1,6 @@
 ## Full Bridge Rectifier Using 2-Wire Transformer
 
-### Picture
-v1.x  
-![](Pictures/v1.x.jpg)
-
-### Simulate for 2.5W Load (5V, 500mA)
+### Simulate
 v2.0, Schematic  
 ![](Simulate/v2.0_Schematic.png)
 

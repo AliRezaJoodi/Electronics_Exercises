@@ -1,5 +1,4 @@
 ### v2.0.asc
-- Load is 2.5W (5V, 500mA)
 - Saved in **LTspice Version 24.1.10**
 
 ### v1.0.pdsprj
