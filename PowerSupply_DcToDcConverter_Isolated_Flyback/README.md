@@ -1,4 +1,4 @@
-## DC-DC Converter, Buck, Isolated, Flyback, Dual, 12V, Low Power
+## DC-DC Converter, Isolated, Flyback, Dual 12V, Low Power
 
 ### Photo
 v1.0  
