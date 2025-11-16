@@ -1,14 +1,11 @@
 ## Protected 4~20mA Analog Input
 
 ### Simulate
-v1.1, Schematic  
-![](Simulate/v1.1_Schematic.png)
+v1.2, Schematic  
+![](Simulate/v1.2_Schematic.png)
 
-v1.1, Plot  
-![](Simulate/v1.1_Plot.png)
-
-v1.0, Schematic  
-![](Simulate/v1.0.png)
+v1.2, Plot  
+![](Simulate/v1.2_Plot.png)
 
 ### More Information
 Source Link: [Jeferson Pehls](https://www.linkedin.com/feed/update/urn:li:activity:7042709425547001856/)  

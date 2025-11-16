@@ -33,9 +33,9 @@ TEXT 13 137 Left 0 5
 TEXT 115 314 Right 0 2
 TEXT 115 168 Right 0 1
 WINDOW 0 64 -64 Center 2
-WINDOW 123 66 -33 Center 2
-SYMATTR Description WE-FB Flyback Transformer\n9.07uH, 10-40Vin, 5V/3A, 8Vaux\nwww.we-online.com/redexpert/article/750311564?al\n\nPlease note the disclaimer in lib/sub/Contrib/Wurth/WE-FB.lib.
-SYMATTR Value2 750311564
+WINDOW 123 0 -32 Left 2
+SYMATTR Description WE-FB Flyback Transformer\n9uH, 10-40Vin, 3.3V/4A, 8Vaux\nwww.we-online.com/redexpert/article/750311625?al\n\nPlease note the disclaimer in lib/sub/Contrib/Wurth/WE-FB.lib.
+SYMATTR Value2 750311625
 SYMATTR Prefix X
 SYMATTR SpiceModel Contrib/Wurth/WE-FB.lib
 PIN 0 0 NONE 6

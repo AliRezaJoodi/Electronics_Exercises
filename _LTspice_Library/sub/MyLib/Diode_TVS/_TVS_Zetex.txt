@@ -217,74 +217,6 @@ R1 1 2 1878.3meg
              
 .ENDS       
 
-*                     (c)  2020 Diodes Incorporated
-*   The copyright in these models  and  the designs embodied belong
-*   to Diodes Incorporated.  They  are  supplied
-*   free of charge by Diodes Incorporated for the purpose of research and design
-*   and may be used or copied intact  (including this notice)  for
-*   that purpose only.  All other rights are reserved.  The models
-*   are believed accurate but no condition  or warranty  as to their
-*   merchantability or fitness for purpose is given and no liability
-*   in respect of any use is accepted by Diodes Incorporated, its distributors
-*   or agents.
-*
-
-
-
-
-
-*
-*DIODES_INC_SPICE_MODEL
-*ORIGIN=DZSL_DPG_SU
-*SIMULATOR=PSPICE
-*DATE=7/23/2021
-*VERSION=1
-
-.SUBCKT SMAJ30CA 1 2
-* Terminals:  A K 
-D1 1 3 SMAJ30CA
-D2 2 3 SMAJ30CA
-R1 1 2 7.794E+09 
-
-.model SMAJ30CA D(IS=658f N=3.688 RS=284.9m CJO=214.3p M=0.244 VJ=0.979 FC=0.5 BV=32.01 IBV=5m) 
-
-.ENDS
-* .SIMULATOR DEFAULT
-
-*         (c)  2019 Diodes Inc
-*   The copyright in these models  and  the designs embodied belong
-*   to Diodes Incorporated (" Zetex ").  They  are  supplied
-*   free of charge by Zetex for the purpose of research and design
-*   and may be used or copied intact  (including this notice)  for
-*   that purpose only.  All other rights are reserved.  The models
-*   are believed accurate but no condition  or warranty  as to their
-*   merchantability or fitness for purpose is given and no liability
-*   in respect of any use is accepted by Diodes Incorporated, its distributors
-*   or agents.
-*
-*   Diodes Zetex Semiconductors Ltd, Zetex Technology Park, Chadderton,
-*   Oldham, United Kingdom, OL9 9LL
-*
-
-
-*
-*DIODES_INC_SPICE_MODEL
-*ORIGIN=DZSL_DPG_SU
-*SIMULATOR=PSPICE
-*DATE=7/23/2021
-*VERSION=1
-
-.SUBCKT SMAJ30CA 1 2
-* Terminals:  A K 
-D1 1 3 SMAJ30CA
-D2 2 3 SMAJ30CA
-R1 1 2 7.794E+09 
-
-.model SMAJ30CA D(IS=658f N=3.688 RS=284.9m CJO=214.3p M=0.244 VJ=0.979 FC=0.5 BV=32.01 IBV=5m) 
-
-.ENDS
-* .SIMULATOR DEFAULT
-
 *         (c)  2019 Diodes Inc
 *   The copyright in these models  and  the designs embodied belong
 *   to Diodes Incorporated (" Zetex ").  They  are  supplied
@@ -598,19 +530,6 @@ R1 1 2 3.788E9
 *
 
 * .SIMULATOR DEFAULT
-
-
-*---------- SMBJ30AQ Spice Model ----------
-.SUBCKT SMBJ30AQ 1 2 
-*     TERMINALS: Anode Cathode
-D1 1 2 D1 
-R1 1 2 3.111E+09 
-.MODEL D1 D 
-+ IS = 2.365E-09 N = 1.711 RS = 0.02362 
-+ CJO = 9.348E-10 VJ = 0.5845 M = 0.3388 FC = 0.5 
-+ BV = 35.1 IBV = 4.441E-10 
-.ENDS
-*Diodes SMBJ30AQ Spice Model v1.0 Last Revised 2019/03/22
 
 
 *

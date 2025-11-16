@@ -11,15 +11,22 @@
 * TORT THEORY OF LIABILITY), EVEN IF DIODES HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES, 
 * AND DIODES' TOTAL LIABILITY (WHETHER IN CONTRACT, TORT OR OTHERWISE) WITH REGARD TO THE SM 
 * DATA WILL NOT, IN THE AGGREGATE, EXCEED ANY SUMS PAID BY YOU TO DIODES FOR THE SM DATA.
+*
+*                (c)  2009 Diodes Incorporated
+*
+*   The copyright in these models  and  the designs embodied belong
+*   to Diodes Incorporated (" Diodes ").  They  are  supplied
+*   free of charge by Diodes for the purpose of research and design
+*   and may be used or copied intact  (including this notice)  for
+*   that purpose only.  All other rights are reserved. The models
+*   are believed accurate but  no condition  or warranty  as to their
+*   merchantability or fitness for purpose is given and no liability
+*   in respect of any use is accepted by Diodes Incorporated, its distributors
+*   or agents.
+*
+*   Diodes Incorporated, 1566 N. Dallas Parkway, Suite 850, Dallas, TX 75248, USA
 
-
-
-*Diodes, Zener <=10V, 3.30V, 0.500W, Diodes Inc.
-*        Terminals    	A  	K
-.SUBCKT BZT52C3V3	1	2
-D1 1 2 DF
-DZ 3 1 DR
-VZ 2 3 0.827
-.MODEL DF D (IS=62.4p RS=36.2 N=1.10 CJO=403p VJ=0.750 M=0.330 TT=50.1n)
-.MODEL DR D (IS=12.5f RS=79.5 N=3.00)
-.ENDS BZT52C3V3
+*
+*Zetex PDS360 Spice Model v1.0 Last Revised 20/02/09
+*
+.MODEL PDS360 D (IS=0.7E-7 N=1.02 ISR=0.94E-7 NR=1.1 BV=63 IBV=2E-4 NBV=2 IBVL=8E-8 NBVL=300 RS=0.034 CJO=390E-12 VJ=1.1 M=0.53 EG=0.74 XTI=2 TRS1=4e-3)

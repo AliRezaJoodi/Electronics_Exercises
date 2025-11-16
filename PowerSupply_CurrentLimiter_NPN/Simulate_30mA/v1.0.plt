@@ -1,3 +1,15 @@
+[DC transfer characteristic]
+{
+   Npanes: 1
+   {
+      traces: 1 {34603011,0,"I(LOAD)"}
+      X: (' ',0,0,3,30)
+      Y[0]: ('m',0,0,0.003,0.033)
+      Y[1]: ('m',0,1e+308,0.003,-1e+308)
+      Amps: ('m',0,0,0,0,0.003,0.033)
+      Log: 0 0 0
+   }
+}
 [Transient Analysis]
 {
    Npanes: 1

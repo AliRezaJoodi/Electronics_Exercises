@@ -14,12 +14,5 @@
 
 
 
-*Diodes, Zener <=10V, 3.30V, 0.500W, Diodes Inc.
-*        Terminals    	A  	K
-.SUBCKT BZT52C3V3	1	2
-D1 1 2 DF
-DZ 3 1 DR
-VZ 2 3 0.827
-.MODEL DF D (IS=62.4p RS=36.2 N=1.10 CJO=403p VJ=0.750 M=0.330 TT=50.1n)
-.MODEL DR D (IS=12.5f RS=79.5 N=3.00)
-.ENDS BZT52C3V3
+*SRC=DFLS1100;DI_DFLS1100;Diodes;Si;  100V  1.00A  11.0ns   Diodes Inc. Schottky Rectifier
+.MODEL DFLS1100 D( IS=270n RS=28.3m BV=100 IBV=1.00u CJO=70.9p  M=0.333 N=1.50 TT=15.8n)
