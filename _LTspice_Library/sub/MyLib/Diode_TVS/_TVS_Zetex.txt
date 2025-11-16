@@ -15,40 +15,6 @@ R1 1 2 1.774E+09
 .ENDS
 * .SIMULATOR DEFAULT
 
-*         (c)  2022 Diodes Inc
-*   The copyright in these models  and  the designs embodied belong
-*   to Diodes Incorporated (" Zetex ").  They  are  supplied
-*   free of charge by Zetex for the purpose of research and design
-*   and may be used or copied intact  (including this notice)  for
-*   that purpose only.  All other rights are reserved.  The models
-*   are believed accurate but no condition  or warranty  as to their
-*   merchantability or fitness for purpose is given and no liability
-*   in respect of any use is accepted by Diodes Incorporated, its distributors
-*   or agents.
-*
-*   Diodes Zetex Semiconductors Ltd, Zetex Technology Park, Chadderton,
-*   Oldham, United Kingdom, OL9 9LL
-*
-
-
-*
-*DIODES_INC_SPICE_MODEL
-*ORIGIN=DZSL_DPG
-*SIMULATOR=PSPICE
-*DATE=09/10/2009
-*VERSION=1
-*PIN_ORDER         C A
-*
-.SUBCKT 30SMCJ22A 1 2
-D1 2 11  Dmod1
-L1 1 11 5E-9
-.MODEL Dmod1 D (IS=1E-12 N=1.1 RS=0.01 TRS1=5E-4 CJO=5950E-12 VJ=0.51
-+ M=0.34 BV=25.3 IBV=100E-6 TBV1=8E-4)
-.ENDS 30SMCJ22A
-*
-*$
-
-
 *
 *DIODES_INC_SPICE_MODEL
 *ORIGIN=DZSL_DPG_SU
@@ -59,7 +25,7 @@ L1 1 11 5E-9
 .model 30SMCJ28A D(IS=.1u RS=0.1 CJO=1800p M=0.5 VJ=0.4 ISR=.008u N=1.05 IKF=1m BV=30 NBV=20 IBV=10u TT=40n EG=.84 TRS1=.1m) 
 
 
-*         (c)  2014 Diodes Inc
+
 *   The copyright in these models  and  the designs embodied belong
 *   to Diodes Incorporated (" Zetex ").  They  are  supplied
 *   free of charge by Zetex for the purpose of research and design
@@ -116,208 +82,6 @@ L1 1 11 5E-9
 
 
 .model DFLT15A D(IS=4f RS=0.194 CJO=4000p M=0.6 VJ=0.5 ISR=.008u N=1.05 IKF=1m BV=16.9 IBV=100u TT=40n EG=.84 TRS1=.1m)              
-       
-
-*                     (c)  2014 Diodes Inc
-*   The copyright in these models  and  the designs embodied belong
-*   to Diodes Incorporated (" Zetex ").  They  are  supplied
-*   free of charge by Zetex for the purpose of research and design
-*   and may be used or copied intact  (including this notice)  for
-*   that purpose only.  All other rights are reserved.  The models
-*   are believed accurate but no condition  or warranty  as to their
-*   merchantability or fitness for purpose is given and no liability
-*   in respect of any use is accepted by Diodes Incorporated, its distributors
-*   or agents.
-*
-*   Diodes Zetex Semiconductors Ltd, Zetex Technology Park, Chadderton,
-*   Oldham, United Kingdom, OL9 9LL
-*
-
-* .SIMULATOR DEFAULT
-
-
-
-*
-*DIODES_INC_SPICE_MODEL
-*ORIGIN=DIO_DPG_YG
-*SIMULATOR=PSPICE
-*DATE=3/3/2022
-*VERSION=1
-
-*-----------------------DFLT26AQ Spice Model---------------------
-.SUBCKT DFLT26AQ 1 2
-*     TERMINALS: Anode Cathode
-D1 1 2 D1
-R1 1 2 1878.3meg
-.model D1 D(IS=958.5f RS=0.1298 CJO=4000p M=0.6 VJ=0.5 
-+N=1.376 
-+BV=30 IBV=500u TT=40n EG=.84)
-             
-.ENDS       
-
-*                     (c)  2022 Diodes Incorporated
-*   The copyright in these models  and  the designs embodied belong
-*   to Diodes Incorporated.  They  are  supplied
-*   free of charge by Diodes Incorporated for the purpose of research and design
-*   and may be used or copied intact  (including this notice)  for
-*   that purpose only.  All other rights are reserved.  The models
-*   are believed accurate but no condition  or warranty  as to their
-*   merchantability or fitness for purpose is given and no liability
-*   in respect of any use is accepted by Diodes Incorporated, its distributors
-*   or agents.
-*
-
-
-*
-*DIODES_INC_SPICE_MODEL
-*ORIGIN=DIO_DPG_YG
-*SIMULATOR=PSPICE
-*DATE=10/12/2020
-*VERSION=1
-
-*-----------------------DFLT33AQ Spice Model---------------------
-.SUBCKT DFLT33AQ 1 2
-*     TERMINALS: Anode Cathode
-D1 1 2 D1
-R1 1 2 1878.3meg
-.model D1 D(IS=958.5f RS=0.1298 CJO=4000p M=0.6 VJ=0.5 
-+N=1.376 
-+BV=38.30 IBV=500u TT=40n EG=.84)
-             
-.ENDS       
-
-*                     (c)  2020 Diodes Incorporated
-*   The copyright in these models  and  the designs embodied belong
-*   to Diodes Incorporated.  They  are  supplied
-*   free of charge by Diodes Incorporated for the purpose of research and design
-*   and may be used or copied intact  (including this notice)  for
-*   that purpose only.  All other rights are reserved.  The models
-*   are believed accurate but no condition  or warranty  as to their
-*   merchantability or fitness for purpose is given and no liability
-*   in respect of any use is accepted by Diodes Incorporated, its distributors
-*   or agents.
-*
-
-
-*
-*DIODES_INC_SPICE_MODEL
-*ORIGIN=DIO_DPG_YG
-*SIMULATOR=PSPICE
-*DATE=10/12/2020
-*VERSION=1
-
-*-----------------------DFLT33A Spice Model---------------------
-.SUBCKT DFLT33A 1 2
-*     TERMINALS: Anode Cathode
-D1 1 2 D1
-R1 1 2 1878.3meg
-.model D1 D(IS=958.5f RS=0.1298 CJO=4000p M=0.6 VJ=0.5 
-+N=1.376 
-+BV=38.30 IBV=500u TT=40n EG=.84)
-             
-.ENDS       
-
-*         (c)  2019 Diodes Inc
-*   The copyright in these models  and  the designs embodied belong
-*   to Diodes Incorporated (" Zetex ").  They  are  supplied
-*   free of charge by Zetex for the purpose of research and design
-*   and may be used or copied intact  (including this notice)  for
-*   that purpose only.  All other rights are reserved.  The models
-*   are believed accurate but no condition  or warranty  as to their
-*   merchantability or fitness for purpose is given and no liability
-*   in respect of any use is accepted by Diodes Incorporated, its distributors
-*   or agents.
-*
-*   Diodes Zetex Semiconductors Ltd, Zetex Technology Park, Chadderton,
-*   Oldham, United Kingdom, OL9 9LL
-*
-
-
-*
-*DIODES_INC_SPICE_MODEL
-*ORIGIN=DZSL_DPG_SU
-*SIMULATOR=PSPICE
-*DATE=10/20/2022
-*VERSION=1
-
-.SUBCKT SMAJ33AQ 1 2
-* Terminals:  A K 
-D1 1 2 SMAJ33AQ
-R1 1 2 7.367E+09 
-
-.model SMAJ33AQ D(IS=610f N=1.214 RS=46.49m CJO=389.6p  M=0.3 VJ=0.47 FC=0.5 BV=38.8 IBV=5m) 
-.ENDS
-
-
-*         (c)  2022 Diodes Inc
-*   The copyright in these models  and  the designs embodied belong
-*   to Diodes Incorporated (" Zetex ").  They  are  supplied
-*   free of charge by Zetex for the purpose of research and design
-*   and may be used or copied intact  (including this notice)  for
-*   that purpose only.  All other rights are reserved.  The models
-*   are believed accurate but no condition  or warranty  as to their
-*   merchantability or fitness for purpose is given and no liability
-*   in respect of any use is accepted by Diodes Incorporated, its distributors
-*   or agents.
-*
-*   Diodes Zetex Semiconductors Ltd, Zetex Technology Park, Chadderton,
-*   Oldham, United Kingdom, OL9 9LL
-*
-
-* .SIMULATOR DEFAULT
-
-
-*
-*DIODES_INC_SPICE_MODEL
-*ORIGIN=DZSL_DPG_SU
-*SIMULATOR=PSPICE
-*DATE=3/04/2019
-*VERSION=1
-
-.SUBCKT SMAJ33CA 1 2
-* Terminals:  A K 
-D1 1 3 SMAJ33CA
-D2 2 3 SMAJ33CA
-R1 1 2 8.872E+09 
-
-.model SMAJ33CA D(IS=41.60p N=1.394 RS=12.42m CJO=250.3p  M=0.3 VJ=0.47 FC=0.5 BV=39.02 IBV=1m) 
-
-
-
-*         (c)  2019 Diodes Inc
-*   The copyright in these models  and  the designs embodied belong
-*   to Diodes Incorporated (" Zetex ").  They  are  supplied
-*   free of charge by Zetex for the purpose of research and design
-*   and may be used or copied intact  (including this notice)  for
-*   that purpose only.  All other rights are reserved.  The models
-*   are believed accurate but no condition  or warranty  as to their
-*   merchantability or fitness for purpose is given and no liability
-*   in respect of any use is accepted by Diodes Incorporated, its distributors
-*   or agents.
-*
-*   Diodes Zetex Semiconductors Ltd, Zetex Technology Park, Chadderton,
-*   Oldham, United Kingdom, OL9 9LL
-*
-
-* .SIMULATOR DEFAULT
-
-
-*
-*DIODES_INC_SPICE_MODEL
-*ORIGIN=DZSL_DPG_SU
-*SIMULATOR=PSPICE
-*DATE=3/04/2019
-*VERSION=1
-
-.SUBCKT SMAJ33CAQ 1 2
-* Terminals:  A K 
-D1 1 3 SMAJ33CAQ
-D2 2 3 SMAJ33CAQ
-R1 1 2 8.872E+09 
-
-.model SMAJ33CAQ D(IS=41.60p N=1.394 RS=12.42m CJO=250.3p  M=0.3 VJ=0.47 FC=0.5 BV=39.02 IBV=1m) 
-
-
 
 *         (c)  2019 Diodes Inc
 *   The copyright in these models  and  the designs embodied belong
@@ -349,7 +113,7 @@ R1 1 2 8.872E+09
 
 
 
-*         (c)  2014 Diodes Inc
+
 *   The copyright in these models  and  the designs embodied belong
 *   to Diodes Incorporated (" Zetex ").  They  are  supplied
 *   free of charge by Zetex for the purpose of research and design
