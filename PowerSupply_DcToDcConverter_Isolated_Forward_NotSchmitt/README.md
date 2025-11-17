@@ -1,4 +1,5 @@
 ## DC To DC Converter, Isolated, Forward
+Note: A simple example for exercises
 
 ### Simulate, Reset Winding
 v1.0, Schematic  
@@ -6,6 +7,9 @@ v1.0, Schematic
 
 v1.0, Plot  
 ![](Simulate_ResetWinding/v1.0_Plot.png)
+
+### Upgrad
+- Use of PWM controller
 
 ### More Information
 **Note**: [You can go here to download a single folder or file from GitHub.com](https://minhaskamal.github.io/DownGit/#/home)  
