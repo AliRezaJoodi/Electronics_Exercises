@@ -1,4 +1,5 @@
 ## DC-DC Converter, Isolated, Flyback, Dual Low Power
+Note: A simple example for exercises
 
 ### Photo
 v1.0  
@@ -14,6 +15,9 @@ v1.1, Plot
 ### Schematic
 v1.0  
 ![](Hardware/v1.0.png)
+
+### Upgrad
+- Use of PWM controller
 
 ### More Information
 **Note**: [You can go here to download a single folder or file from GitHub.com](https://minhaskamal.github.io/DownGit/#/home)  
