@@ -1,8 +1,12 @@
-## Isolated DC To DC Converter, Forward Converter
+## DC To DC Converter, Isolated, Forward
 
-### Schematic
-v1.0  
-![](Hardware/v1.0.png)
+### Simulate, Reset Winding
+v1.0, Schematic  
+![](Simulate_ResetWinding/v1.0_Schematic.png)
 
-My GitHub: [GitHub.com/AliRezaJoodi](https://github.com/AliRezaJoodi)  
-**Note**: [You can go here to download a single folder or file from GitHub.com](https://minhaskamal.github.io/DownGit/#/home)
+v1.0, Plot  
+![](Simulate_ResetWinding/v1.0_Plot.png)
+
+### More Information
+**Note**: [You can go here to download a single folder or file from GitHub.com](https://minhaskamal.github.io/DownGit/#/home)  
+My GitHub Account: [GitHub.com/AliRezaJoodi](https://github.com/AliRezaJoodi)  
