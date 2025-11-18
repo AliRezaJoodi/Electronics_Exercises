@@ -12,6 +12,9 @@ v1.1, Schematic
 v1.1, Plot  
 ![](Simulate/v1.1_Plot.png)
 
+v1.1, Plot  
+![](Simulate/v1.1_Plot2.png)
+
 ### Schematic
 v1.0  
 ![](Hardware/v1.0.png)
