@@ -1,26 +1,23 @@
 ## DC-DC Converter, Isolated, Flyback, Dual Low Power
-Note: A simple example for exercises
+Note: A simple example for exercises.  
+Note: It's better to use a PWM controller IC.  
+Note: Using a toroidal ferrite for a flyback is not good.  
 
 ### Photo
 v1.0  
 ![](Pictures/v1.0.jpg)
 
 ### Simulate
-v1.1, Schematic  
-![](Simulate/v1.1_Schematic.png)
+v2.0, Schematic  
+![](Simulate/v2.0_Schematic1.png)  
+![](Simulate/v2.0_Schematic2.png)  
 
-v1.1, Plot  
-![](Simulate/v1.1_Plot.png)
-
-v1.1, Plot  
-![](Simulate/v1.1_Plot2.png)
+v2.0, Plot  
+![](Simulate/v2.0_Plot.png)
 
 ### Schematic
 v1.0  
 ![](Hardware/v1.0.png)
-
-### Upgrad
-- Use of PWM controller
 
 ### More Information
 **Note**: [You can go here to download a single folder or file from GitHub.com](https://minhaskamal.github.io/DownGit/#/home)  
