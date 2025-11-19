@@ -7,6 +7,7 @@
 - [Using CD4000_v.lib and 74hc.lib in LTSpice](https://acidbourbon.wordpress.com/2021/06/30/using-cd4000_v-lib-in-ltspice/?utm_source=chatgpt.com)  
 
 ## Extra
+- `.ic V(OUT)=12`
 - `.param Fs = 16k`
 - `{1/Fs}`
 - `.model MOSFET SW(Ron=1u Roff=100Meg Vt=90)`
