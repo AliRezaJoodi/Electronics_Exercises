@@ -14,14 +14,13 @@
 
 
 
-*Diodes, Zener, 2.40V, 0.350W
-*SYM=HZEN
-*        Terminals    A   K
-.SUBCKT BZX84C2V4  1 2
+*Diodes, Zener, 4.30V, 0.500W, Diodes Inc.
+*	Terminals	A	K
+.SUBCKT BZT52C4V3  	1 	2
 D1 1 2 DF
 DZ 3 1 DR
-VZ 2 3 0
-.MODEL DF D ( IS=60.1p RS=36.1 N=1.10
-+ CJO=205p VJ=0.750 M=0.330 TT=50.1n )
-.MODEL DR D ( IS=12.0f RS=84.5 N=3.00 )
-.ENDS
+VZ 2 3 1.83
+.MODEL DF D ( IS=47.9p RS=35.4 N=1.10
++ CJO=370p VJ=0.750 M=0.330 TT=50.1n )
+.MODEL DR D ( IS=9.58f RS=74.5 N=3.00)
+.ENDS BZT52C4V3

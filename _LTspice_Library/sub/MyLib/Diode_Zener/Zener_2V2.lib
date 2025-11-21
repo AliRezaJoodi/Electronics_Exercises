@@ -1,7 +1,7 @@
 * Zener Diode 2.2V, 0.5W
 
-.subckt Zener_2V2 1 2
-*        Terminals    A   K
+*     	Terminals	A   	K
+.subckt	Zener_2V2 	1 	2
 D1 1 N1 D_F
 DZ N2 1 D_R
 VZ 2 N2 2.2

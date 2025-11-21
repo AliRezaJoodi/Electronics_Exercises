@@ -1,16 +1,17 @@
 ### v3.0.asc
-- Low Ripple
-- Adding a new secondary winding
-- Isolated FeedBack
+- Note: High voltage ripple at the output
+- Isolated FeedBack using Optocoupler and TL431
+- Dual 5V1/15W
 - Saved in **LTspice Version 24.1.10**
 
 ### v2.0.asc
-- High Ripple
-- Isolated FeedBack
+- Note: Zener is not reliable for feedback.
+- Isolated FeedBack using Optocoupler and zener
+- Dual 5V1/15W
 - Saved in **LTspice Version 24.1.10**
 
 ### v1.1.asc
-- Dual 5V1, 15W
+- Dual 5V1/15W
 - NonIsolated FeedBack
 - Saved in **LTspice Version 24.1.10**
 
