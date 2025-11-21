@@ -9,6 +9,10 @@ Note: Usable for low power.
 Note: It's better to use a PWM controller IC.  
 Note: Using a toroidal ferrite for a flyback is not good.  
 
+### Features, v2.0
+- **Output:** Isolated Dual 5.1V, Low Power
+- **Input:** 12V
+
 ### Simulate
 v2.0, Schematic  
 ![](Simulate/v2.0_Schematic1.png)  

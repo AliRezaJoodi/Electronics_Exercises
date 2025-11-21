@@ -1,4 +1,4 @@
-## DC-DC Converter, Non-Isolated, Boost
+## DC-DC Converter, Non-Isolated, Boost, Based on LT3844
 Note: Default applications for exercise
 
 ### More Information

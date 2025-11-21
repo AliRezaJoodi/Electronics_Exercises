@@ -1,4 +1,4 @@
-## DC To DC Converter, Isolated, Forward
+## DC-DC Converter, Isolated, Forward, Based on Not-Schmitt
 Note: A simple example for exercises
 
 ### Simulate, Reset Winding

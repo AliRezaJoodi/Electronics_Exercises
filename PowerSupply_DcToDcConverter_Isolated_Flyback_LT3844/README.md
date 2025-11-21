@@ -1,4 +1,4 @@
-## DC-DC Converter, Isolated, Flyback, Based on LT3844, Dual 5V1/15W
+## DC-DC Converter, Isolated, Flyback, Based on LT3844, Dual
 
 ### Simulate
 v2.0, Schematic  
