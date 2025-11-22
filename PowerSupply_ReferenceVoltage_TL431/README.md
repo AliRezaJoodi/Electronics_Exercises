@@ -16,13 +16,6 @@ v1.0, Schematic
 v1.0, Plot  
 ![](Simulate_2/v1.0_Plot.png)
 
-### Simulate, Isolated feedback in DC to DC converter
-v1.0, Schematic  
-![](Simulate_3/v1.0_Schematic.png)
-
-v1.0, Plot  
-![](Simulate_3/v1.0_Plot.png)
-
 ### More Information
 **Note**: [You can go here to download a single folder or file from GitHub.com](https://minhaskamal.github.io/DownGit/#/home)  
 My GitHub Account: [GitHub.com/AliRezaJoodi](https://github.com/AliRezaJoodi)  
