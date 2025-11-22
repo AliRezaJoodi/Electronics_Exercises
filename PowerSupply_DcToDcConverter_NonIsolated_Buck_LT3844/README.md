@@ -1,5 +1,5 @@
 ## DC-DC Converter, Non-Isolated, Buck, Based on LT3844
-Note: v1.0 is a default applications from LTspice for exercise.  
+Note: v1.0 is a default applications from LTspice.  
 Note: An exercise to understand the DC-DC converter.  
 
 ### Features, v1.2
