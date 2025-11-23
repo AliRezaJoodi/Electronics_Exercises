@@ -1,0 +1,81 @@
+*DZDH0401DW Spice model
+*SIMULATOR=SIMETRIX
+*ORIGIN=DZSL_DPG_PH
+*DATE= 12 November 2020
+*VERSION=2
+*#SIMETRIX
+
+* 	DZDH0401DW REF BIAS 	SOURCE 	DRAIN 
+.subckt DZDH0401DW 2 	3 	4 	6
+Q1 3 2 4 DI_PNP
+Q2 6 2 2 DI_PNP
+.MODEL DI_PNP  PNP
++ IS=8.40e-15	
++ NF=1.11	 
++ ISE=2.13e-11	
++ NE=1.65	
++ BF=210 	
++ VAF=114
++ IKF=48.6e-3 
++ ISC=2.7e-12
++ NC=2.0	
++ BR=56.00	
++ NR=1.0006
++ VAR=200
++ IKR=0.120 
++ RE=1.21
++ RB=4.83
++ RC=0.483
++ CJE=10.9p
++ VJE=1.10
++ MJE=1.50
++ CJC=17p
++ VJC=0.3
++ MJC=0.300
++ TF=558p 
++ TR=84.1n 
++ EG=1.12
++ XTB=1.5
+.ends DZDH0401DW
+
+******************************************************************************
+*                	 (c)  2023 Diodes Inc
+*
+*   Diodes Incorporated and its affiliated companies and subsidiaries 
+*   (collectively, "Diodes") provide these spice models and data 
+*   (collectively, the "SM data") "as is" and without any representations
+*   or warranties, express or implied, including any warranty of
+*   merchantability or fitness for a particular purpose, any warranty 
+*   arising from course of dealing or course of performance, or any 
+*   warranty that access to or operation of the SM data will be
+*   uninterrupted, or that the SM data or any simulation using the SM data
+*   will be error free.
+*
+*   To the maximum extent permitted by law, in no event will Diodes be
+*   liable for any indirect, special, incidental, punitive or consequential
+*   damages arising out of or in connection with the production or use of
+*   SM data, however caused and under whatever cause of action or theory of
+*   liability brought (including, without limitation, under any contract,
+*   negligence or other tort theory of liability), even if Diodes has been
+*   advised of the possibility of such damages, and Diodes' total liability
+*   (whether in contract, tort or otherwise) with regard to the SM data
+*   will not, in the aggregate, exceed any sums paid by you to Diodes for
+*   the SM data
+*
+*   Diodes Zetex Semiconductors Ltd, Zetex Technology Park, Chadderton,
+*   Oldham, United Kingdom, OL9 9LL
+******************************************************************************
+
+* DIODES INCORPORATED AND ITS AFFILIATED COMPANIES AND SUBSIDIARIES (COLLECTIVELY, "DIODES") 
+* PROVIDE THESE SPICE MODELS AND DATA (COLLECTIVELY, THE "SM DATA") "AS IS" AND WITHOUT ANY 
+* REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING ANY WARRANTY OF MERCHANTABILITY 
+* OR FITNESS FOR A PARTICULAR PURPOSE, ANY WARRANTY ARISING FROM COURSE OF DEALING OR COURSE OF 
+* PERFORMANCE, OR ANY WARRANTY THAT ACCESS TO OR OPERATION OF THE SM DATA WILL BE UNINTERRUPTED, 
+* OR THAT THE SM DATA OR ANY SIMULATION USING THE SM DATA WILL BE ERROR FREE. TO THE MAXIMUM 
+* EXTENT PERMITTED BY LAW, IN NO EVENT WILL DIODES BE LIABLE FOR ANY DIRECT OR INDIRECT, 
+* SPECIAL, INCIDENTAL, PUNITIVE OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN CONNECTION WITH 
+* THE PRODUCTION OR USE OF SM DATA, HOWEVER CAUSED AND UNDER WHATEVER CAUSE OF ACTION OR THEORY 
+* OF LIABILITY BROUGHT (INCLUDING, WITHOUT LIMITATION, UNDER ANY CONTRACT, NEGLIGENCE OR OTHER 
+* TORT THEORY OF LIABILITY), EVEN IF DIODES HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES, 
+* AND DIODES' TOTAL LIABILITY (WHETHER IN CONTRACT, TORT OR OTHERWISE) WITH REGARD TO THE SM 
+* DATA WILL NOT, IN THE AGGREGATE, EXCEED ANY SUMS PAID BY YOU TO DIODES FOR THE SM DATA.
