@@ -1,3 +1,7 @@
+### v1.3.asc
+- Output: 5V/100W
+- Input: 12V
+
 ### v1.2.asc
 - Output: 12V/200W
 - Input: 24V
