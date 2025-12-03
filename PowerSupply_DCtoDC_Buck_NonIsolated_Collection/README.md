@@ -1,4 +1,4 @@
-## DC-DC Converter, Non-Isolated, Boost
+## Buck DC-DC Converter
 Note: Default applications from LTspice for exercise
 
 ### More Information

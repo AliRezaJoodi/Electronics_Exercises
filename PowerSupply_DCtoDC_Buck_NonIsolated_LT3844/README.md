@@ -1,19 +1,19 @@
-## DC-DC Converter, Non-Isolated, Boost, Based on LT3844
-Note: Default applications of datasheet.  
+## Buck DC-DC Converter, Based on LT3844
+Note: v1.0 is a default applications from LTspice.  
 Note: An exercise to understand the DC-DC converter.  
 
-### Features, v1.0
-- **Output:** 24V/50W
+### Features, v1.3
+- **Output:** 5V/100W
 - **Input:** 12V
 - **Controller:** PWM controller based on LT3844
 
 ### Simulate
-v1.0, Schematic  
-![](Simulate/v1.0_Schematic1.png)  
-![](Simulate/v1.0_Schematic2.png)  
+v1.3, Schematic  
+![](Simulate/v1.3_Schematic1.png)  
+![](Simulate/v1.3_Schematic2.png)  
 
-v1.0, Plot  
-![](Simulate/v1.0_Plot.png)
+v1.3, Plot  
+![](Simulate/v1.3_Plot.png)
 
 ### More Information
 **Note**: [You can go here to download a single folder or file from GitHub.com](https://minhaskamal.github.io/DownGit/#/home)  
