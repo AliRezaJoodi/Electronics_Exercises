@@ -1,10 +1,6 @@
-### v1.3.asc
-- Output: 5V/100W
+### v2.0.asc
+- Output: 5V/15W
 - Input: 12V
-
-### v1.2.asc
-- Output: 12V/200W
-- Input: 24V
 
 ### v1.1.asc
 - Clean Schematic
