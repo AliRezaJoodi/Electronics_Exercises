@@ -1,4 +1,4 @@
-## DC-DC Converter, Isolated, Flyback, Dual Low Power
+## Flyback DC-DC Converter, Isolated, Dual Low Power
 
 ### Photo
 v1.0  
