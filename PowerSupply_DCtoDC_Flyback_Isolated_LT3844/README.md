@@ -1,6 +1,7 @@
 ## Flyback DC-DC Converter, Isolated, Based on LT3844
 
-Note: LT3844 is not common for isolated feedback. This is just an exercise.  
+Note: Using LT3844 for isolated feedback is uncommon. 
+Note: This example is for exercise purposes.
 Note: Feedback based on Optocoupler and LT431 in v2.0 need to be better.  
 
 ### Simulate

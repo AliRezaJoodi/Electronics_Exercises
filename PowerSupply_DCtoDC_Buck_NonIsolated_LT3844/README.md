@@ -1,10 +1,12 @@
-## Buck DC-DC Converter, Based on LT3844
+## Buck DC-DC Converter, Non-Isolated, Asynchronous, Based on LT3844
 Note: v1.0 is a default applications from LTspice.  
 Note: An exercise to understand the DC-DC converter.  
 
 ### Features, v2.0
 - **Output:** 5V/15W
 - **Input:** 12V
+- **Non-Isolated**
+- **Asynchronous**
 - **Controller:** PWM controller based on LT3844
 
 ### Simulate
