@@ -1,9 +1,9 @@
 ## Buck DC-DC Converter, Non-Isolated, Asynchronous, Based on LT3844
-Note: v1.0 is a default applications from LTspice.  
-Note: An exercise to understand the DC-DC converter.  
+Note: The initial schematic was the default application provided by LTspice (v1.0).
+Note: I tried to create a clean schematic, and then tried to modify it for 5V/15W (v2.0). 
 
 ### Features, v2.0
-- **Output:** 5V/15W
+- **Output:** 5V, 15W
 - **Input:** 12V
 - **Non-Isolated**
 - **Asynchronous**
