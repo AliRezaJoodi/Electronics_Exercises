@@ -1,5 +1,5 @@
-## Buck DC-DC Converter
-Note: Default applications from LTspice for exercise
+## Buck DC-DC Converter, Non-Isolated, Asynchronous
+Note: Default applications in LTspice for exercise
 
 ### More Information
 **Note**: [You can go here to download a single folder or file from GitHub.com](https://minhaskamal.github.io/DownGit/#/home)  
