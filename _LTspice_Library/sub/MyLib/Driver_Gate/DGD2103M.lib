@@ -1,0 +1,217 @@
+* DIODES INCORPORATED AND ITS AFFILIATED COMPANIES AND SUBSIDIARIES (COLLECTIVELY, "DIODES") 
+* PROVIDE THESE SPICE MODELS AND DATA (COLLECTIVELY, THE "SM DATA") "AS IS" AND WITHOUT ANY 
+* REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING ANY WARRANTY OF MERCHANTABILITY 
+* OR FITNESS FOR A PARTICULAR PURPOSE, ANY WARRANTY ARISING FROM COURSE OF DEALING OR COURSE OF 
+* PERFORMANCE, OR ANY WARRANTY THAT ACCESS TO OR OPERATION OF THE SM DATA WILL BE UNINTERRUPTED, 
+* OR THAT THE SM DATA OR ANY SIMULATION USING THE SM DATA WILL BE ERROR FREE. TO THE MAXIMUM 
+* EXTENT PERMITTED BY LAW, IN NO EVENT WILL DIODES BE LIABLE FOR ANY DIRECT OR INDIRECT, 
+* SPECIAL, INCIDENTAL, PUNITIVE OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN CONNECTION WITH 
+* THE PRODUCTION OR USE OF SM DATA, HOWEVER CAUSED AND UNDER WHATEVER CAUSE OF ACTION OR THEORY 
+* OF LIABILITY BROUGHT (INCLUDING, WITHOUT LIMITATION, UNDER ANY CONTRACT, NEGLIGENCE OR OTHER 
+* TORT THEORY OF LIABILITY), EVEN IF DIODES HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES, 
+* AND DIODES' TOTAL LIABILITY (WHETHER IN CONTRACT, TORT OR OTHERWISE) WITH REGARD TO THE SM 
+* DATA WILL NOT, IN THE AGGREGATE, EXCEED ANY SUMS PAID BY YOU TO DIODES FOR THE SM DATA.
+
+
+
+*DATE=10AUG2020
+*VERSION=1.0
+
+
+.subckt DGD2103M VCC HIN LIN COM LO VS HO VB
+C1 uvvc COM 10p
+S1 COM hinst HIN COM SHIN
+C2 hinst COM 0.01p
+D1 COM HIN DMOD
+D2 HIN VCC DMOD
+R1 HIN COM 1.667Meg
+R2 bias1 hinst 100k
+S2 COM uvvc VCC COM SUVCC
+S3 COM linst LIN COM SLIN
+C3 linst COM 0.01p
+R3 bias3 LIN 1.667Meg
+R4 linst bias1 100k
+D3 COM LIN DMOD
+D4 LIN VCC DMOD
+C4 cdh COM 50n
+C5 ondlyh COM 10p
+C6 ondlyl COM 10p
+D5 COM VCC DMOD
+R5 VCC COM 44k
+D6 COM VS DMODH
+D7 VS VB DMOD
+C7 dlyoutl COM 10p
+S4 drvlp illp dlyoutl COM SRSTP
+S5 illn drvln dlyoutl COM SRSTN
+R6 drvlp LO 22.25 tol=1
+R7 drvln LO 11.2 tol=1
+C8 LO COM 1n
+D8 COM LO DMOD
+D9 LO VCC DMOD
+R8 VB VS 255.5k
+C9 onh COM 10p
+S6 drvhp ilhp onh COM SRSTP
+S7 ilhn drvhn onh COM SRSTN
+R9 drvhp HO 22.25 tol=1
+R10 drvhn HO 11.2 tol=1
+C10 HO VS 1n
+D10 VS HO DMOD
+D11 HO VB DMOD
+R11 uvvc bias1 1k
+S8 COM uvbs VB VS SUVB
+C11 uvbs COM 10p
+R12 uvbs bias2 1k tol=1
+XX1 cdh offconth offdlyh VCC ideal_comparator
+XX2 onconth cdh ondlyh VCC ideal_comparator
+XX3 cdl offcontl offdlyl VCC ideal_comparator
+XX4 oncontl cdl ondlyl VCC ideal_comparator
+D12 COM VB DMODH
+E1 bias1 COM VCC COM 1
+E2 bias2 COM VCC COM 1
+C12 cdl COM 50n
+XX5 lino uvvc lovc VCC ideal_nand_2
+XX6 uvvc hino hivc VCC ideal_nand_2
+;BdlyOff1 offcontl COM V=(V(VCC)-V(VCC)*EXP(-{toff}/50.5n))
+BdlyOff1 offcontl COM V=(V(VCC)-V(VCC)*EXP(-150n/50.5n))
+;BdlyOn1 oncontl COM V=V(VCC)*EXP(-{ton}/50.25n)
+BdlyOn1 oncontl COM V=V(VCC)*EXP(-680n/50.25n)
+;BdlyOff2 offconth COM V=(V(VCC)-V(VCC)*EXP(-{toff}/50.5n))
+BdlyOff2 offconth COM V=(V(VCC)-V(VCC)*EXP(-150n/50.5n))
+;BdlyOn2 onconth COM V=V(VCC)*EXP(-{ton}/50.25n)
+BdlyOn2 onconth COM V=V(VCC)*EXP(-680n/50.25n)
+XX7 lovc cdl VCC ideal_buffercd
+XX8 hivc cdh VCC ideal_buffercd
+XX9 ondlyh dlyouth onhrs VCC nor_2
+XX10 offdlyh onhrs dlyouth VCC nor_2
+XX11 ondlyl dlyoutl onlrs VCC nor_2
+XX12 offdlyl onlrs dlyoutl VCC nor_2
+C13 dlyouth COM 10p
+XX13 uvbs dlyouth onh VCC ideal_and_2
+R13 hinstb hdelay {Rdelay}
+C14 hdelay COM {Cdelay}
+XX14 hinstb ldelayb hino VCC ideal_nor_2
+XX16 linstb hdelayb lino VCC ideal_nor_2
+R14 linstb ldelay {Rdelay}
+C15 ldelay COM {Cdelay}
+XX15 hinst hinstb VCC ideal_inverter
+XX17 hdelay hdelayb VCC ideal_inverter
+XX18 linst linstb VCC ideal_inverter
+XX19 ldelay ldelayb VCC ideal_inverter
+V1 bias3 COM 5
+S9 VS ilhn dlyhn VS SILIMN
+E3 bias4 VS HO drvhn 1
+R15 bias4 dlyhn 10k
+C16 dlyhn VS 10p
+S10 ilhp VB dlyhp VS SILIMP
+E4 bias5 VS drvhp HO 1
+R16 bias5 dlyhp 10k
+C17 dlyhp VS 10p
+E5 bias6 COM LO drvln 1
+R17 bias6 dlyln 10k
+C18 dlyln COM 10p
+E6 bias7 COM drvlp LO 1
+R18 bias7 dlylp 10k
+C19 dlylp COM 10p
+S11 illp VCC dlylp COM SILIMP
+S12 COM illn dlyln COM SILIMN
+.MODEL DMOD D(IS=1.0e-14 RS=0.01 N=1 EG=1.11 XTI=3 BV=25 IBV=0.0001 CJO=0 VJ=0.75 M=0.333 FC=0.5 TT=0 KF=0 AF=1)
+.MODEL DMODH D(IS=1.0e-14 RS=0.01 N=1 EG=1.11 XTI=3 BV=625 IBV=0.0001 CJO=0 VJ=0.75 M=0.333 FC=0.5 TT=0 KF=0 AF=1)
+.MODEL SRSTN SW(Ron=10Meg Roff=1m Vt=1.5 Vh=1.2)
+.MODEL SRSTP SW(Ron=1m Roff=10Meg Vt=1.5 Vh=1.2)
+.MODEL SLIN SW(Ron=1m Roff=10Meg Vt=1.5 Vh=0.15)
+.param Cdelay=0.001p Rdelay=15.3k T1=-40 T2=25 T3=125 V1=10 V2=15 V3=20 ton=680n toff=150n
+.MODEL SUVCC SW(Ron=10Meg Roff=1m Vt=8.55 Vh=0.35)
+.MODEL SHIN SW(Ron=10Meg Roff=1m Vt=1.5 Vh=0.15)
+;.MODEL SILIMN SW(Ron=30.5 Roff=1m Vt=3.6 Vh=0)
+;.MODEL SILIMP SW(Ron=49 Roff=1m Vt=4 Vh=0)
+.MODEL SILIMN SW(Ron=30.5 Roff=1m Vt=3.6 Vh=0.001)
+.MODEL SILIMP SW(Ron=49 Roff=1m Vt=4 Vh=0.001)
+.MODEL SUVB SW(Ron=10Meg Roff=1m Vt=5.35 Vh=0.15)
+.ends DGD2103M
+
+.subckt ideal_comparator 1 2 3 VDD
+S3 3 VDD 1 2 switmod
+S4 0 3 2 1 switmod
+.model switmod SW
+.ends ideal_comparator
+
+.subckt ideal_nand_2 A B Y Vdd
+S1 Y Vdd Vtrip A switmod
+S2 N001 Y A Vtrip switmod
+E1 Vtrip 0 Vdd 0 0.5
+S3 Y Vdd Vtrip B switmod
+S5 0 N001 B Vtrip switmod
+C1 Y 0 10p
+.model switmod SW
+.ends ideal_nand_2
+
+.subckt ideal_buffercd A Y Vdd
+S3 Y Vdd A N001 switmodcd
+S4 0 Y N001 A switmodcd
+E1 N001 0 Vdd 0 0.5
+C1 Y 0 10p
+;.model switmodcd SW(Ron=1 Roff=10Meg Vt=0 Vh=0)
+.model switmodcd SW(Ron=1 Roff=10Meg Vt=0 Vh=0.001)
+.ends ideal_buffercd
+
+.subckt nor_2 A B Y Vdd
+M1 Y B N001 Vdd PFET l=1u w=100u
+M2 N001 A Vdd Vdd PFET l=1u w=100u
+M3 Y B 0 0 NFET l=1u w=50u
+M4 Y A 0 0 NFET l=1u w=50u
+.MODEL PFET PMOS (LEVEL=3 TOX=200E-10 NSUB=1E17 GAMMA=0.6 PHI=0.7 VTO=-0.9 DELTA=0.1 UO=250 ETA=0 THETA=0.1
++ KP=40E-6 VMAX=5E4 KAPPA=1 RSH=0 NFS=1E12 TPG=-1 XJ=500E-9 LD=100E-9 CGDO=200E-12 CGSO=200E-12 CGBO=1E-10
++ CJ=400E-6 PB=1 MJ=0.5 CJSW=300E-12 MJSW=0.5)
+.MODEL NFET NMOS (LEVEL=3 TOX=200E-10 NSUB=1E17 GAMMA=0.5 PHI=0.7 VTO=0.8 DELTA=3.0 UO=650 ETA=3.0E-6 THETA =0.1
++ KP=120E-6 VMAX=1E5 KAPPA=0.3 RSH=0 NFS=1E12 TPG=1 XJ=500E-9 LD=100E-9 CGDO=200E-12 CGSO=200E-12 CGBO=1E-10
++ CJ=400E-6 PB=1 MJ= 0.5 CJSW=300E-12 MJSW=0.5)
+.ends nor_2
+
+.subckt ideal_and_2 A B Y Vdd
+S1 N001 Vdd Vtrip A switmod
+S2 N002 N001 A Vtrip switmod
+E1 Vtrip 0 Vdd 0 0.5
+S3 N001 Vdd Vtrip B switmod
+S5 0 N002 B Vtrip switmod
+S4 Y Vdd Vtrip N001 switmod
+S6 0 Y N001 Vtrip switmod
+C1 N001 0 10p
+C2 Y 0 10p
+.model switmod SW
+.ends ideal_and_2
+
+.subckt ideal_nor_2 A B Y Vdd
+S1 Y N001 Vtrip A switmod
+S2 0 Y A Vtrip switmod
+E1 Vtrip 0 Vdd 0 0.5
+S3 N001 Vdd Vtrip B switmod
+S5 0 Y B Vtrip switmod
+C1 Y 0 10p
+.model switmod SW(Ron=1m Roff=10Meg)
+.ends ideal_nor_2
+
+.subckt ideal_inverter A Y Vdd
+S3 Y Vdd N001 A switmod
+S4 0 Y A N001 switmod
+E1 N001 0 Vdd 0 0.5
+C1 Y 0 10p
+.model switmod SW
+.ends ideal_inverter
+
+
+******************************************************************************
+*                (c)  2020 Diodes Inc						
+*						
+*   The copyright in these models  and  the designs embodied belong
+*   to Diodes Incorporated (" Zetex ").  They  are  supplied
+*   free of charge by Zetex for the purpose of research and design
+*   and may be used or copied intact  (including this notice)  for
+*   that purpose only.  All other rights are reserved.  The models
+*   are believed accurate but no condition  or warranty  as to their
+*   merchantability or fitness for purpose is given and no liability
+*   in respect of any use is accepted by Diodes Incorporated, its distributors
+*   or agents.						
+*						
+*   Diodes Zetex Semiconductors Ltd, Zetex Technology Park, Chadderton,
+*   Oldham, United Kingdom, OL9 9LL
+******************************************************************************

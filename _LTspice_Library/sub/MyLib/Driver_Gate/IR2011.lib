@@ -1,0 +1,339 @@
+******************************************************************************
+*  Simulation model of IR2011 Level 1 for SIMetrix version 8.3g or higher
+*  Version: 01.00 (Revision: 336)
+*  (C) Copyright 2020 Infineon Technologies. All rights reserved. 
+*
+******************************************************************************
+*  Model performance : 
+*  - Static Electrical Characteristics and Dynamic Electrical Characteristics 
+*    are modeled with the typical values from the datasheet.
+*  - Temperature effects are not modeled
+*
+*  The following features have been modeled :
+*  - Switching Characteristics such as propagation delay, peak currents
+*  - Undervoltage lockout 
+*
+******************************************************************************
+* PINS:
+*  --------------------------------------------------------------------------
+*  | NAME | DESCRIPTION 
+*  --------------------------------------------------------------------------
+*  | LO   | Low side gate drive output 
+*  --------------------------------------------------------------------------
+*  | HO   | High side gate drive output 
+*  --------------------------------------------------------------------------
+*  | COM  | Low side return 
+*  --------------------------------------------------------------------------
+*  | LIN  | Logic input for low side gate driver output (LO), in phase 
+*  --------------------------------------------------------------------------
+*  | HIN  | Logic input for high side gate driver output (HO), in phase 
+*  --------------------------------------------------------------------------
+*  | VCC  | Low-side and logic supply voltage 
+*  --------------------------------------------------------------------------
+*  | VB   | High side floating supply 
+*  --------------------------------------------------------------------------
+*  | VS   | High side floating supply return 
+*  --------------------------------------------------------------------------
+*
+******************************************************************************
+* DISCLAIMER
+* 
+* INFINEON’S MODEL TERMS OF USE
+*
+* BY DOWNLOADING AND/OR USING THIS INFINEON MODEL (“MODEL”), THE USER
+* (INCLUDING YOU) AGREES TO BE BOUND BY THE TERMS OF USE HERE STATED. IF USER
+* DOES NOT AGREE TO ALL TERMS OF USE HERE STATED, USER SHALL NOT DOWNLOAD,
+* USE OR COPY THE MODEL BUT IMMEDIATELY DELETE IT (TO THE EXTENT THAT IT
+* WAS DOWNLOADED ALREADY).
+*
+* 1. SCOPE OF USE
+* 1.1 Any use of this Model provided by Infineon Technologies AG is subject
+*     to these Terms of Use.
+* 1.2 This Model, provided by Infineon, does not fully represent all of the
+*     specifications and operating characteristics of the product to which
+*     this Model relates.
+* 1.3 This Model only describes the characteristics of a typical product.
+*     In all cases, the current data sheet information for a given product
+*     is the final design guideline and the only actual performance
+*     specification. Although this Model can be a useful tool to evaluate
+*     the product performance, it cannot simulate the exact product performance
+*     under all conditions and it is also not intended to replace
+*     bread-boarding for final verification.
+*
+* 2. IMPORTANT NOTICE
+* 2.1 Infineon Technologies AG (“Infineon”) is not and cannot be aware of the
+*     specific application of the Infineon’s Model by User. However, Model may
+*     from time to time be used by User in potentially harmful and/or life-
+*     endangering applications such as traffic, logistic, medical, nuclear
+*     or military applications or in other applications where failure of the
+*     Model may predictably cause damage to persons’ life or health or to
+*     property (hereinafter "Critical Applications").
+* 2.2 User acknowledges that Infineon has not specifically designed or
+*     qualified the Model for Critical Applications that the Model may contain
+*     errors and bugs and that User is required to qualify the Model for
+*     Critical Applications pursuant to the applicable local quality, safety
+*     and legal requirements before permitting or giving access to any such use.
+*
+* 3. CONFIDENTIAL INFORMATION
+*     User shall treat ideas, concepts and information incorporated in the
+*     Model, the documentation and the content of this Terms of Use (together
+*     hereinafter "Confidential Information") confidential, not disclose it to
+*     any third party unless otherwise agreed in writing between User and
+*     Infineon, not use it for any other purposes than using the Model for
+*     simulation and testing purposes only.
+*
+* 4. WARRANTY
+* 4.1 User acknowledges that the Model is provided by Infineon under this Terms	       
+*     of Use is provided free of charge and "AS IS" without any warranty or 	      
+*     liability of any kind and Infineon hereby expressly disclaims any 		      
+*     warranties or representations, whether express, implied, statutory or 	      
+*     otherwise, including but not limited to warranties of workmanship, 		      
+*     merchantability, fitness for a particular purpose, defects in the 		      
+*     Model, or non-infringement of third parties intellectual property rights.	       
+* 4.2 Infineon reserves the right to make corrections, deletions, modifications, 	      
+*     enhancements, improvements and other changes to the Model at any time 	      
+*     or to move or discontinue any Model without notice. 			      
+* 										      
+* 5. LIABILITY 									      
+* 5.1 Nothing in this Terms of Use shall limit or exclude Infineon's liability 	      
+*     under mandatory liability laws, for injuries to life, body or health,  	      
+*     for fraudulent concealment of defects in the software, or in cases 		      
+*     of Infineon's intentional misconduct or gross negligence. 			      
+* 5.2 Without prejudice to Sections 5.1, in cases of Infineon's slight		       
+*     negligent breach of obligations that restrict essential rights or duties 	      
+*     arising from the nature of this Terms of Use in a way that there is a 	      
+*     risk of non-achievement of the purpose of this Terms of Use or of an 	      
+*     obligation whose observance User regularly may trust in and whereas		       
+*     compliance with only makes proper execution of this Terms of Use 		      
+*     possible, Infineon's liability shall be limited to the typically, 		      
+*     foreseeable damage. 							      
+* 5.3 Without prejudice to Sections 8.1 and 8.2, Infineon's liability under 	      
+*     this Agreement shall be excluded in all other cases. 			      
+* 										      
+* 6. EXPORT REGULATIONS 								      
+*     The User shall comply with all applicable national and international 	      
+*     laws and regulations, in particular the applicable export control 		      
+*     regulations and sanction programs. The User also agrees not to 		      
+*     export, re-export or transfer any software or technology developed		       
+*     with or using information, software or technology offered by Infineon, 	      
+*     in violation of any applicable laws or regulations of the competent 	      
+*     authorities. Further, the User shall neither use any products, 		      
+*     information, software and technology offered by Infineon in or in 		      
+*     connection with nuclear technology or weapons of mass destruction 		      
+*     (nuclear, biological or chemical) and carriers thereof nor supply 		      
+*     military consignees. 							      
+* 										      
+* 7. TERMINATION OF USE PERMIT 							      
+*     If the User violates these Terms of Use, such User’s permit to use 		      
+*     this Model terminates automatically. In addition, Infineon may 		      
+*     terminate the User’s permit to use this Model at its discretion and 	      
+*     at any time regardless of any violation of these Terms of Use. In 		      
+*     any of the foregoing events, the User is obliged to immediately destroy 	      
+*     any content that has been downloaded or printed from Infineon’s website. 	      
+* 										      
+* 8. MISCELLANEOUS 								      
+* 8.1 These Terms of Use are subject to the laws of the Federal Republic 		      
+*     of Germany with the exception of the United Nations on Purchase 		      
+*     Contracts on the International Sale of Goods dated April 11, 1980 (CISG). 	      
+*     The exclusive place of jurisdiction is Munich, Germany. 			      
+* 8.2 Should any provision in these Terms of Use be or become invalid, the 	      
+*     validity of all other provisions or agreements shall remain unaffected
+*     thereby.
+*
+******************************************************************************
+.SUBCKT IR2011 LO HO COM LIN HIN VCC VB VS
+R_HIN HIN COM 1E12
+C_HIN HIN COM 1F
+R_LIN LIN COM 1E12
+C_LIN LIN COM 1F
+R_HO HO VS 1E12
+R_LO LO COM 1E12
+R_VB VB VS 1E12
+R_VCC VCC COM 1E12
+R_VS VS COM 1E12
+E_SD SD COM VALUE={5}
+R_SD SD COM 1E12
+R_DT DT COM 1M
+C_DT DT COM 1P
+X_GD_TEMPLATE LO HO COM LIN HIN VCC VB VS SD DT IR2011_GD_TEMPLATE
+.ENDS IR2011
+.SUBCKT IR2011_GD_TEMPLATE LO HO COM LIN HIN VCC VB VS SD DT PARAMS: HB_EN=0 SHT_EN=0 P_OFFSET_DT=4E-07 P_SLOPE_DT=2.3E-11 P_SD_D=
++ 2.5571428571428575E-08 P_TH_SD_UP=2.9 P_TH_SD_DW=0.6 P_C_SD_LPF=1.4476482730108395E-10 P_C_TPD=1.0811E-08 P_TH_TPD=0.5112662768 
++ P_C_PW_MIN=1E-10 P_TH_HIN_OFF=0.5 P_TH_LIN_OFF=0.5 P_TH_HIN_ON=2.4 P_TH_LIN_ON=2.4 P_R_HIN_CL=471428.5714285714 P_R_LIN_CL=
++ 471428.5714285714 P_C_GATE=1E-12 P_RBOND_NMOS=0.01 P_RBOND_PMOS=0.01 P_LO_VGS_NMOS=2.1 P_LO_VGS_PMOS=7 P_LPMOS_LAMDA=0.551 
++ P_LPMOS_KP=6.6E-06 P_LNMOS_LAMDA=0.21 P_LNMOS_KP=0.0004 P_HO_VGS_NMOS=2.1 P_HO_VGS_PMOS=7 P_HPMOS_LAMDA=0.551 P_HPMOS_KP=6.6E-06 
++ P_HNMOS_LAMDA=0.21 P_HNMOS_KP=0.0004 P_VCC_UVH=9 P_VCC_UVL=8.2 P_VB_UVL=8.2 P_VB_UVH=9 P_R_UV_D_H=1428.5714285714287 P_R_UV_D_L=
++ 1428.5714285714287 P_VCC_MIN=10 P_IQ_VCC_MIN=8E-05 P_VB_MIN=10 P_IQ_VB_MIN=7E-05 P_VCC_MAX=20 P_IQ_VCC_MAX=0.0002 P_VB_MAX=20 
++ P_IQ_VB_MAX=0.00011 P_V_LEAK=600 P_I_LEAK=1E-06 P_R_BSD=35 P_N_BSD=1.4534194248417849 P_IS_BSD=9.1E-16
+R_LIN_CLAMP LIN COM {P_R_LIN_CL}
+R_HIN_CLAMP HIN COM {P_R_HIN_CL}
+X_HIN_VCC_D HIN VCC IR2011_ESD_DIO PARAMS: P_V_BV=0.3 P_I_BV=1M
+X_COM_HIN_D COM HIN IR2011_ESD_DIO PARAMS: P_V_BV=0.3 P_I_BV=1M
+X_LIN_VCC_D LIN VCC IR2011_ESD_DIO PARAMS: P_V_BV=0.3 P_I_BV=1M
+X_COM_LIN_D COM LIN IR2011_ESD_DIO PARAMS: P_V_BV=0.3 P_I_BV=1M
+X_CL_VCC VCC COM IR2011_CL_DIO PARAMS: P_V_BV=25 P_I_BV=1
+X_CL_VB VB VS IR2011_CL_DIO PARAMS: P_V_BV=25 P_I_BV=1
+X_INPUT_STAGE LIN_DD HIN_DD SD_DD LIN HIN SD COM IR2011_INPUT_STAGE PARAMS: P_SD_D={P_SD_D} P_TH_SD_UP={P_TH_SD_UP} P_TH_SD_DW=
++ {P_TH_SD_DW} P_C_SD_LPF={P_C_SD_LPF} P_C_TPD={P_C_TPD} P_TH_TPD={P_TH_TPD} P_C_PW_MIN={P_C_PW_MIN} P_TH_HIN_OFF={P_TH_HIN_OFF} 
++ P_TH_LIN_OFF={P_TH_LIN_OFF} P_TH_HIN_ON={P_TH_HIN_ON} P_TH_LIN_ON={P_TH_LIN_ON}
+X_DEADTIME LIN_DT_DIG HIN_DT_DIG LIN_DD HIN_DD DT VCC COM SD_DD VCC_UV IR2011_DEADTIME PARAMS: P_SLOPE_DT={P_SLOPE_DT} P_OFFSET_DT=
++ {P_OFFSET_DT} HB_EN={HB_EN} SHT_EN = {SHT_EN}
+X_HO_STAGE HO HIN_DT_DIG VCC_UV VB_UV SD_DD VB VS IR2011_HO_STAGE PARAMS: P_RBOND_PMOS={P_RBOND_PMOS} P_RBOND_NMOS={P_RBOND_NMOS} 
++ P_C_GATE={P_C_GATE} P_HO_VGS_PMOS={P_HO_VGS_PMOS} P_HPMOS_LAMDA={P_HPMOS_LAMDA} P_HPMOS_KP={P_HPMOS_KP} P_HO_VGS_NMOS=
++ {P_HO_VGS_NMOS} P_HNMOS_LAMDA={P_HNMOS_LAMDA} P_HNMOS_KP={P_HNMOS_KP}
+X_LO_STAGE LO LIN_DT_DIG VCC_UV SD_DD VCC COM IR2011_LO_STAGE PARAMS: P_RBOND_PMOS={P_RBOND_PMOS} P_RBOND_NMOS={P_RBOND_NMOS} 
++ P_C_GATE={P_C_GATE} P_LO_VGS_PMOS={P_LO_VGS_PMOS} P_LPMOS_LAMDA={P_LPMOS_LAMDA} P_LPMOS_KP={P_LPMOS_KP} P_LO_VGS_NMOS=
++ {P_LO_VGS_NMOS} P_LNMOS_LAMDA={P_LNMOS_LAMDA} P_LNMOS_KP={P_LNMOS_KP}
+X_UV_DETECT VCC_UV VB_UV VCC VB COM VS IR2011_UV_DETECT PARAMS: P_VB_UVL={P_VB_UVL} P_VB_UVH={P_VB_UVH} P_R_UV_D_H={P_R_UV_D_H} 
++ P_VCC_UVL={P_VCC_UVL} P_VCC_UVH={P_VCC_UVH} P_R_UV_D_L={P_R_UV_D_L}
+X_CC_EMULATOR VCC COM VB VS IR2011_CC_EMULATOR PARAMS: P_VB_MIN={P_VB_MIN} P_VCC_MIN={P_VCC_MIN} P_IQ_VB_MIN={P_IQ_VB_MIN} 
++ P_IQ_VCC_MIN={P_IQ_VCC_MIN} P_I_LEAK={P_I_LEAK} P_V_LEAK={P_V_LEAK} P_VB_MAX={P_VB_MAX} P_VCC_MAX={P_VCC_MAX} P_IQ_VB_MAX=
++ {P_IQ_VB_MAX} P_IQ_VCC_MAX={P_IQ_VCC_MAX}
+.ENDS IR2011_GD_TEMPLATE
+.SUBCKT IR2011_INPUT_STAGE LIN_DD HIN_DD SD_DD LIN HIN SD COM PARAMS: P_SD_D=5E-08 P_TH_SD_UP=2.1 P_TH_SD_DW=1.1 P_C_TPD=1.9E-07 
++ P_TH_TPD=10E-9 P_TH_HIN_OFF=0.9 P_TH_LIN_OFF=0.9 P_TH_HIN_ON=2.1 P_TH_LIN_ON=2.1 P_C_PW_MIN=42E-9 P_C_SD_LPF=1E-9
+X_SD_TH SD SD_DIG COM IR2011_STP_IDEAL PARAMS: P_TH_UP={P_TH_SD_UP} P_TH_DW={P_TH_SD_DW}
+X_SD_LPF SD_DIG SD_LPF_DIG IR2011_ADV_FILTER PARAMS: P_C_DELAY = {P_C_SD_LPF}
+X_SD_DD SD_LPF_DIG SD_DD IR2011_RC_DELAY_10 PARAMS: P_C_DELAY = {P_SD_D}
+X_HIN_TH HIN HIN_DIG COM IR2011_STP_IDEAL PARAMS: P_TH_UP={P_TH_HIN_ON} P_TH_DW={P_TH_HIN_OFF}
+X_HIN_LPF HIN_DIG HIN_LPF_DIG IR2011_ADV_FILTER PARAMS: P_C_DELAY = {P_C_PW_MIN}
+X_HIN_DD HIN_LPF_DIG HIN_DD IR2011_RC_DELAY_10 PARAMS: P_C_DELAY = {P_C_TPD} P_TH_TPD = {P_TH_TPD}
+X_LIN_TH LIN LIN_DIG COM IR2011_STP_IDEAL PARAMS: P_TH_UP={P_TH_LIN_ON} P_TH_DW={P_TH_LIN_OFF}
+X_LIN_LPF LIN_DIG LIN_LPF_DIG IR2011_ADV_FILTER PARAMS: P_C_DELAY = {P_C_PW_MIN}
+X_LIN_DD LIN_LPF_DIG LIN_DD IR2011_RC_DELAY_10 PARAMS: P_C_DELAY = {P_C_TPD} P_TH_TPD = {P_TH_TPD}
+.ENDS IR2011_INPUT_STAGE
+.SUBCKT IR2011_OVC_DETECT ITRIP RFE OVC_OUT_CTRL VCC_UV COM PARAMS: P_TH_OVC_UP=0.445 P_TH_OVC_DW=0.375 P_C_ITRIP_LPF=330E-9 
++ P_I_TRIP=2.8E-06 P_TH_RFE_UP=5.2 P_TH_RFE_DW=3.2 P_R_RFE_ON=45 P_C_ITRIP_TO_RFE=1E-9 P_C_ITRIP_TO_OUT=1E-9 P_TH_TPD_ITRIP_TO_RFE=0
+R_ITRIP ITRIP COM 800K
+X_ITRIP ITRIP OVC_DIG COM IR2011_STP_IDEAL PARAMS: P_TH_UP={P_TH_OVC_UP} P_TH_DW={P_TH_OVC_DW}
+X_OVC_LPF OVC_DIG OVC_LPF_DIG IR2011_ADV_FILTER PARAMS: P_C_DELAY = {P_C_ITRIP_LPF}
+X_ITRIP_TO_RFE OVC_LPF_DIG RFE_CTRL1 IR2011_RC_DELAY_10 PARAMS: P_C_DELAY = {P_C_ITRIP_TO_RFE} P_TH_TPD={P_TH_TPD_ITRIP_TO_RFE}
+X_ITRIP_TO_OUT OVC_LPF_DIG OVC_DD IR2011_RC_DELAY_10 PARAMS: P_C_DELAY = {P_C_ITRIP_TO_OUT}
+G_RFE RFE COM VALUE {(V(RFE,COM)/{P_R_RFE_ON})*V(RFE_CTRL)}
+X_RFE_TH RFE RFE_DIG COM IR2011_STP_IDEAL PARAMS: P_TH_UP={P_TH_RFE_UP} P_TH_DW={P_TH_RFE_DW}
+E_OVC_PLS OVC_PLS 0 VALUE={IF( (V(OVC_DD) > 0.5) | (V(OVC) > 0.5) , 1.0 , 0.0)}
+E_OVC OVC 0 VALUE={IF( (V(OVC_PLS) > 0.5) & (V(RFE_DIG) < 0.5) , 1.0 , 0.0)}
+E_OUT_CTRL OVC_OUT_CTRL 0 VALUE={V(OVC)}
+E_RFE_CTRL RFE_CTRL 0 VALUE={IF( (V(VCC_UV) < 0.5) | (V(RFE_CTRL1) > 0.5) , 1.0 , 0.0 )}
+.ENDS IR2011_OVC_DETECT
+.SUBCKT IR2011_DEADTIME LIN_DT_DIG HIN_DT_DIG LIN HIN DT VCC COM SD_DD VCC_UV PARAMS: HB_EN=1 SHT_EN=0.0 P_SLOPE_DT=2.43236451E-05 
++ P_OFFSET_DT=5.4E-07 P_I_DT=1E-06 P_C_DT=10P P_TH_UP=0.5
+X_LIN_DT LIN LIN_DD IR2011_RC_DELAY_10 PARAMS: P_C_DELAY = 0.3N
+X_HIN_DT HIN HIN_DD IR2011_RC_DELAY_10 PARAMS: P_C_DELAY = 0.1N
+E_VCC_1V VCC_1V 0 VALUE={TABLE( V(VCC,COM) , 0,0 , 3,0 , 6,1 )}
+G_DT VCC DT VALUE={TABLE( V(VCC,DT) , 0,0 , 10M,{P_I_DT} )}
+E_HDT_PLS HIN_DT_PLS 0 VALUE={IF( ((V(HIN_DD) - V(LIN_DD)) > 0.1) | (V(HIN_DT_DIG) > 0.5) | ({HB_EN} < 0.5), 1.0 , 0.0 )}
+E_HIN_DT HIN_DT_DIG 0 VALUE={IF( ( ((V(HIN_DT_PLS) > 0.5) & (V(LOFF) > {P_TH_UP})) | {HB_EN} < 0.5 ) & (V(HIN_DD) > 0.5 ) & V(
++ VCC_UV) > 0.5 & V(SD_DD)>0.5 , 1.0 , 0.0 )}
+E_LDT_PLS LIN_DT_PLS 0 VALUE={IF( ((V(LIN_DD) - V(HIN_DD)) > 0.1) | (V(LIN_DT_DIG) > 0.5) | ({HB_EN} < 0.5) , 1.0 , 0.0 )}
+E_LIN_DT LIN_DT_DIG 0 VALUE={IF( ( ((V(LIN_DT_PLS) > 0.5) & (V(HOFF) > {P_TH_UP})) | {HB_EN} < 0.5 ) & (V(LIN_DD) > 0.5 ) , 1.0 , 
++ 0.0 )}
+E_SHT_H SHT_H 0 VALUE={IF( {SHT_EN} > 0.5 , V(HIN_DD) , V(HIN_DT_DIG) )}
+E_SHT_L SHT_L 0 VALUE={IF( {SHT_EN} > 0.5 , V(LIN_DD) , V(LIN_DT_DIG) )}
+G_H_DT VCC_1V HOFF VALUE={TABLE( V(VCC_1V,HOFF) , 0,0 , 10M, I_DT( V(DT,COM) ) )}
+C_H_DT HOFF 0 {P_C_DT}
+R_H_DT HOFF 0 1E8
+S_H_DT HOFF 0 SHT_H 0 IR2011_DT_SW
+G_L_DT VCC_1V LOFF VALUE={TABLE( V(VCC_1V,LOFF) , 0,0 , 10M, I_DT( V(DT,COM) ) )}
+C_L_DT LOFF 0 {P_C_DT}
+R_L_DT LOFF 0 1E8
+S_L_DT LOFF 0 SHT_L 0 IR2011_DT_SW
+.FUNC I_DT(V_DT) {{P_C_DT} * {P_TH_UP} / ({P_SLOPE_DT}/{P_I_DT}*V_DT + {P_OFFSET_DT})}
+.MODEL IR2011_DT_SW VSWITCH RON=1 ROFF=100MEG VON=0.8 VOFF=0.2
+.ENDS IR2011_DEADTIME
+.SUBCKT IR2011_HO_STAGE HO HIN_DT_DIG VCC_UV VB_UV SD_DD VB VS PARAMS: P_RBOND_NMOS=10M P_RBOND_PMOS=10M P_C_GATE=1E-12 
++ P_HO_VGS_PMOS=6 P_HPMOS_LAMDA=0.06 P_HPMOS_KP=60U P_HO_VGS_NMOS=6 P_HNMOS_LAMDA=0.05 P_HNMOS_KP=100U
+R_HIN_DT_DD HIN_DT_DIG HIN_DT_DD 100
+C_HIN_DT_DD HIN_DT_DD 0 1N
+E_HIN_PLS HIN_PLS 0 VALUE {IF( (V(HIN_DT_DIG) - V(HIN_DT_DD)) > 0.1 | ((V(HGATE_DIG) > 0.5) & V(HIN_DT_DIG)>0.5), 1.0,0.0 )}
+E_HGATE_DIG HGATE_DIG 0 VALUE {IF( ( V(HIN_PLS) > 0.5 & V(VB_UV) > 0.5 & V(SD_DD) > 0.5 ) , 1.0,0.0 )}
+R_HGATE HGATE_DIG HGATE 1
+C_HGATE HGATE 0 {P_C_GATE}
+E_HGATE_P VB HGATE_P VALUE {V(HGATE) * {P_HO_VGS_PMOS} * V(HGATE_DIG)}
+E_HGATE_N HGATE_N VS VALUE {(1 - V(HGATE)) * {P_HO_VGS_NMOS} * (1 - V(HGATE_DIG))}
+M_HO_PMOS HO HGATE_P VB VB IR2011_HO_PMOS
+M_HO_NMOS HO HGATE_N VS VS IR2011_HO_NMOS
+.MODEL IR2011_HO_PMOS PMOS (LEVEL=1 VTO=-1 CGSO=100P W=1M L=1U RB=1 RG=10 RS=10M RD={P_RBOND_PMOS} LAMBDA={P_HPMOS_LAMDA} KP=
++ {P_HPMOS_KP} )
+.MODEL IR2011_HO_NMOS NMOS (LEVEL=1 VTO=1 CGSO=100P W=1M L=1U RB=1 RG=10 RS=10M RD={P_RBOND_NMOS} LAMBDA={P_HNMOS_LAMDA} KP=
++ {P_HNMOS_KP} )
+.ENDS IR2011_HO_STAGE
+.SUBCKT IR2011_LO_STAGE LO LIN_DT_DIG VCC_UV SD_DD VCC COM PARAMS: P_RBOND_NMOS=10M P_RBOND_PMOS=10M P_C_GATE=1E-12 P_LO_VGS_PMOS=6 
++ P_LPMOS_LAMDA=0.06 P_LPMOS_KP=60U P_LO_VGS_NMOS=6 P_LNMOS_LAMDA=0.05 P_LNMOS_KP=100U
+E_LGATE_DIG LGATE_DIG 0 VALUE {IF( (V(VCC_UV) > 0.5 & V(LIN_DT_DIG) > 0.5 & V(SD_DD) > 0.5 ), 1.0,0.0 )}
+R_LGATE LGATE_DIG LGATE 1
+C_LGATE LGATE 0 {P_C_GATE}
+E_LGATE_P VCC LGATE_P VALUE {V(LGATE) * {P_LO_VGS_PMOS} * V(LGATE_DIG)}
+E_LGATE_N LGATE_N COM VALUE {(1 - V(LGATE)) * {P_LO_VGS_NMOS} * (1 - V(LGATE_DIG))}
+M_LO_PMOS LO LGATE_P VCC VCC IR2011_LO_PMOS
+M_LO_NMOS LO LGATE_N COM COM IR2011_LO_NMOS
+.MODEL IR2011_LO_PMOS PMOS (LEVEL=1 VTO=-1 CGSO=100P W=1M L=1U RB=1 RG=10 RS=10M RD={P_RBOND_PMOS} LAMBDA={P_LPMOS_LAMDA} KP=
++ {P_LPMOS_KP} )
+.MODEL IR2011_LO_NMOS NMOS (LEVEL=1 VTO=1 CGSO=100P W=1M L=1U RB=1 RG=10 RS=10M RD={P_RBOND_NMOS} LAMBDA={P_LNMOS_LAMDA} KP=
++ {P_LNMOS_KP} )
+.ENDS IR2011_LO_STAGE
+.SUBCKT IR2011_UV_DETECT VCC_UV VB_UV VCC VB COM VS PARAMS: P_VB_UVL=7 P_VB_UVH=8 P_R_UV_D_H=142857 P_VCC_UVL=8 P_VCC_UVH=9 
++ P_R_UV_D_L=71428
+X_VB_UV VB VB_UV_DIG VS IR2011_STP_IDEAL PARAMS: P_TH_UP={P_VB_UVH} P_TH_DW={P_VB_UVL}
+E_VB_UVL VB_UVL 0 VALUE {IF( V(VB,VS) < {P_VB_UVL} , 0.0 , 1.0 )}
+R_VB_UVL VB_UVL VB_UVL_LPF {P_R_UV_D_H}
+C_VB_UVL VB_UVL_LPF 0 1P
+E_VB_UVL_PLS VB_UVL_PLS 0 VALUE {IF( V(VB_UVL_LPF) < 0.5 | V(VB_UV) < 0.5 , 0.0 , 1.0 )}
+E_VB_UV VB_UV 0 VALUE {IF( V(VB_UV_DIG) < 0.5 & V(VB_UVL_PLS) < 0.5 , 0.0 , 1.0 )}
+X_VCC_UV VCC VCC_UV_DIG COM IR2011_STP_IDEAL PARAMS: P_TH_UP={P_VCC_UVH} P_TH_DW={P_VCC_UVL}
+E_VCC_UVL VCC_UVL 0 VALUE {IF( V(VCC,COM) < {P_VCC_UVL} , 0.0 , 1.0 )}
+R_VCC_UVL VCC_UVL VCC_UVL_LPF {P_R_UV_D_L}
+C_VCC_UVL VCC_UVL_LPF 0 1P
+E_VCC_UVL_PLS VCC_UVL_PLS 0 VALUE {IF( V(VCC_UVL_LPF) < 0.5 | V(VCC_UV) < 0.5 , 0.0 , 1.0 )}
+E_VCC_UV VCC_UV 0 VALUE {IF( V(VCC_UV_DIG) < 0.5 & V(VCC_UVL_PLS) < 0.5 , 0.0 , 1.0 )}
+.ENDS IR2011_UV_DETECT
+.SUBCKT IR2011_CC_EMULATOR VCC COM VB VS PARAMS: P_VB_MIN=10 P_VCC_MIN=10 P_IQ_VB_MIN=100U P_IQ_VCC_MIN=500U P_I_LEAK=1.0U P_V_LEAK=
++ 650 P_VB_MAX=10 P_VCC_MAX=10 P_IQ_VB_MAX=100U P_IQ_VCC_MAX=500U
+G_QB VB VS VALUE {TABLE(V(VB,VS) , 0,0 , 0.1,1U , 1,10U , {P_VB_MIN},{P_IQ_VB_MIN} , {P_VB_MAX},{P_IQ_VB_MAX} )}
+R_QB VB VS 1E12
+G_QCC VCC COM VALUE {TABLE(V(VCC,COM) , 0,0 , 0.1,1U , 1,10U , {P_VCC_MIN},{P_IQ_VCC_MIN} , {P_VCC_MAX},{P_IQ_VCC_MAX} )}
+R_QCC VCC COM 1E12
+G_VB_LEAK VS COM VALUE {TABLE(V(VB,COM) , 0,0 , {P_V_LEAK},{P_I_LEAK})}
+R_VB_LEAK VS COM 1E12
+.ENDS IR2011_CC_EMULATOR
+.SUBCKT IR2011_CL_DIO C A PARAMS: P_V_BV=5 P_I_BV=1
+G_CL_DIO C A VALUE {TABLE(V(C,A) , 0,0 , {P_V_BV}*1.01,0 , {P_V_BV}*1.02,{P_I_BV} , 10*{P_V_BV}, 100*{P_I_BV} )}
+C_CL_DIO C A 10F
+R_CL_DIO C A 1E12
+.ENDS IR2011_CL_DIO
+.SUBCKT IR2011_ESD_DIO A C PARAMS: P_V_BV=5 P_I_BV=1
+G_ESD_DIO A C VALUE {TABLE(V(A,C) , 0,0 , {P_V_BV}*1.01,0 , {P_V_BV}*1.02,{P_I_BV} , 10*{P_V_BV}, 100*{P_I_BV} )}
+C_ESD_DIO A C 10F
+R_ESD_DIO A C 1E12
+.ENDS IR2011_ESD_DIO
+.SUBCKT IR2011_RC_DELAY_10 IN OUT PARAMS: P_C_DELAY = 60E-9 P_TH_TPD = 0.5
+X_D1 IN D1 IR2011_RC_DELAY_5 PARAMS: P_C_DELAY = {P_C_DELAY} P_TH_TPD = {P_TH_TPD}
+X_D2 D1 OUT IR2011_RC_DELAY_5 PARAMS: P_C_DELAY = {P_C_DELAY} P_TH_TPD = {P_TH_TPD}
+.ENDS IR2011_RC_DELAY_10
+.SUBCKT IR2011_RC_DELAY_5 IN OUT PARAMS: P_C_DELAY = 60E-9 P_TH_TPD = 0.5
+X_D1 IN D1 IR2011_RC_DELAY_BASE PARAMS: P_C_DELAY = {P_C_DELAY} P_TH_TPD = {P_TH_TPD}
+X_D2 D1 D2 IR2011_RC_DELAY_BASE PARAMS: P_C_DELAY = {P_C_DELAY} P_TH_TPD = {P_TH_TPD}
+X_D3 D2 D3 IR2011_RC_DELAY_BASE PARAMS: P_C_DELAY = {P_C_DELAY} P_TH_TPD = {P_TH_TPD}
+X_D4 D3 D4 IR2011_RC_DELAY_BASE PARAMS: P_C_DELAY = {P_C_DELAY} P_TH_TPD = {P_TH_TPD}
+X_D5 D4 OUT IR2011_RC_DELAY_BASE PARAMS: P_C_DELAY = {P_C_DELAY} P_TH_TPD = {P_TH_TPD}
+.ENDS IR2011_RC_DELAY_5
+.SUBCKT IR2011_RC_DELAY_BASE IN OUT PARAMS: P_C_DELAY = 60E-9 P_TH_TPD = 0.5
+R_DELAY IN IN_DEL 1
+C_DELAY IN_DEL 0 {P_C_DELAY}
+E_DELAY OUT 0 VALUE={IF( V(IN_DEL) > {P_TH_TPD} , 1.0,0.0 )}
+.ENDS IR2011_RC_DELAY_BASE
+.SUBCKT IR2011_ADV_FILTER IN OUT PARAMS: P_C_DELAY = 60E-9 P_TH_TPD = 0.5
+R_RISE IN IN_DEL 1
+C_RISE IN_DEL 0 {P_C_DELAY}
+X_CMP IN_DEL OUT 0 IR2011_STP_IDEAL PARAMS: P_TH_UP=0.999 P_TH_DW=0.001
+.ENDS IR2011_ADV_FILTER
+.SUBCKT IR2011_STP_IDEAL IN OUT GND PARAMS: P_TH_UP=0.9 P_TH_DW=0.1
+E_OUTP OUTP 0 VALUE={IF( V(IN,GND)>={P_TH_UP} | V(OUTN)<0.5 , 1,0 )}
+E_OUTN OUTN 0 VALUE={IF( V(IN,GND)<={P_TH_DW} | V(OUTP)<0.5 , 1,0 )}
+E_OUT OUT 0 VALUE={V(OUTP)}
+.ENDS IR2011_STP_IDEAL
+.SUBCKT IR2011_STN_IDEAL IN OUT GND PARAMS: P_TH_UP=0.9 P_TH_DW=0.1
+E_OUTP OUTP 0 VALUE={IF( V(IN,GND)>={P_TH_UP} | V(OUTN)<0.5 , 1,0 )}
+E_OUTN OUTN 0 VALUE={IF( V(IN,GND)<={P_TH_DW} | V(OUTP)<0.5 , 1,0 )}
+E_OUT OUT 0 VALUE={V(OUTN)}
+.ENDS IR2011_STN_IDEAL
