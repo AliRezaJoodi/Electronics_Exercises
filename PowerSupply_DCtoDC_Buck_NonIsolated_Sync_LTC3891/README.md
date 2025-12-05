@@ -1,13 +1,13 @@
-## Buck DC-DC Converter, Non-Isolated, Asynchronous, Based on LT3844
+## Buck DC-DC Converter, Non-Isolated, Synchronous, Based on LTC3891
 Note: The initial schematic was the default application provided by LTspice (v1.0).  
-Note: I tried to create a clean schematic, and then tried to modify it for 5V/15W (v2.0).  
+Note: I tried to create a clean schematic, and then tried to modify it for 5V/100W (v2.0).  
 
 ### Features, v2.0
-- **Output:** 5V, 15W
+- **Output:** 5V, 100W
 - **Input:** 12V
 - **Non-Isolated**
 - **Asynchronous**
-- **Controller:** PWM controller based on LT3844
+- **Controller:** PWM controller based on LTC3891
 
 ### Simulate
 v2.0, Schematic  
