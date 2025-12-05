@@ -1,4 +1,4 @@
-## Boost DC-DC Converter, Based on LT3844
+## Boost DC-DC Converter, Non-Isolated, Asynchronous, Based on LT3844
 Note: Default applications of datasheet.  
 Note: An exercise to understand the DC-DC converter.  
 
