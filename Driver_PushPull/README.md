@@ -1,15 +1,4 @@
-## Push Pull Driver with BD13x Transistors
-
-### Folders
-- `Hardware` — Included hardware layers
-- `Simulate` — Simulation file
-
-### Schematic
-v2.0  
-![](Hardware/v2.0.png)
-
-v1.0  
-![](Hardware/v1.0.png)
+## Push-Pull Driver Using BJT Transistors
 
 ### Simulate
 v1.0, Schematic  
