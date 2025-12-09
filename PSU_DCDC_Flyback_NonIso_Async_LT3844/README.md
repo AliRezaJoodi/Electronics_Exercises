@@ -1,8 +1,7 @@
 ## Flyback DC-DC Converter, Non-Isolated, Asynchronous, Based on LT3844
 
 ### Features
-- **Output 1:** 5V/15W, Non-Isolated
-- **Output 2:** 5V/15W, Isolated
+- **Output:** 5V/15W
 - **Input:** 12V
 - **Feedback Type:** Non-Isolated, Resistor Divider
 - **Controller:** PWM controller based on LT3844
