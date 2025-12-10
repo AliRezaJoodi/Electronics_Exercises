@@ -17,6 +17,7 @@ v1.0, Schematic
 
 v1.0, Plot  
 ![](Simulate/v1.0_Plot.png)  
+![](Simulate/v1.0_Plot2.png)  
 
 ### More Information
 **Note**: [You can go here to download a single folder or file from GitHub.com](https://minhaskamal.github.io/DownGit/#/home)  
