@@ -1,15 +1,18 @@
 ## Flyback DC-DC Converter, Isolated, Asynchronous
 
-Note: Dual Low Power
+Note: This circuit is only for exercise.  
+Note: It's better to use a PWM controller IC.  
+Note: Using a toroidal ferrite for a flyback is not good.  
+
+### Features
+- **Output:** 5V/1W x2, Isolated
+- **Input:** 12V
+- **Feedback Type:** Isolated FeedBack using Optocoupler and TL431
+- **Controller:** Pulse with ON/OFF
 
 ### Photo
 v1.0  
 ![](Pictures/v1.0.jpg)
-
-Note: A simple example Just for exercises.  
-Note: Usable for low power.  
-Note: It's better to use a PWM controller IC.  
-Note: Using a toroidal ferrite for a flyback is not good.  
 
 ### Features, v2.0
 - **Output:** Isolated Dual 5.1V, Low Power

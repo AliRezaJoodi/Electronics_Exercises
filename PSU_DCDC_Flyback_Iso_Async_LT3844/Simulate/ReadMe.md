@@ -1,10 +1,5 @@
-### v2.1.asc
-- Output: 5V/15W x2
-- Edited FeedBack
-
 ### v2.0.asc
-- Output: 5V/15W x2
-- Note: High voltage ripple at the output
+- Output: 5V/15W x2, Isolated
 - Isolated FeedBack using Optocoupler and TL431
 
 ### v1.0.asc

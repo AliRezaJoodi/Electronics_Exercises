@@ -1,8 +1,8 @@
 ## Flyback DC-DC Converter, Isolated, Asynchronous, Based on LT3844
 
-Note: Using LT3844 for isolated feedback is uncommon. 
-Note: This example is for exercise purposes.
-Note: The feedback needs to be better.  
+This circuit is only for exercise.  
+For a proper flyback design, it's better to use a controller IC that supports Discontinuous Conduction Mode (DCM) detection.  
+Without DCM detection, like in the LT3844, adjusting the switching timing correctly becomes difficult. 
 
 ### Features
 - **Output:** 5V/15W x2, Isolated
@@ -17,7 +17,8 @@ v2.0, Schematic
 ![](Simulate/v2.0_Schematic3.png)  
 
 v2.0, Plot  
-![](Simulate/v2.0_Plot.png)
+![](Simulate/v2.0_Plot.png)  
+![](Simulate/v2.0_Plot2.png)  
 
 ### More Information
 **Note**: [You can go here to download a single folder or file from GitHub.com](https://minhaskamal.github.io/DownGit/#/home)  

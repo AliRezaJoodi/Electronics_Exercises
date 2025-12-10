@@ -2,7 +2,7 @@
 Note: Default applications of datasheet.  
 Note: An exercise to understand the DC-DC converter.  
 
-### Features, v1.0
+### Features
 - **Output:** 24V/50W
 - **Input:** 12V
 - **Controller:** PWM controller based on LT3844
