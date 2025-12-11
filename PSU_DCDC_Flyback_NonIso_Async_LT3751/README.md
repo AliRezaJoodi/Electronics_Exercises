@@ -1,15 +1,12 @@
-## Flyback DC-DC Converter, Non-Isolated, Asynchronous, Based on LT3844
-
-This circuit is only for exercise.  
-For a proper flyback design, it's better to use a controller IC that supports Discontinuous Conduction Mode (DCM) detection.  
-Without DCM detection, like in the LT3844, adjusting the switching timing correctly becomes difficult.  
+## Flyback DC-DC Converter, Non-Isolated, Asynchronous, Based on LT3751
 
 ### Features
 - **Output:** 5V/15W
 - **Input:** 12V
 - **Feedback Type:** Non-Isolated, Resistor Divider
+- **Discontinuous Conduction Mode (DCM)**
 - **Current Mode Control**
-- **Controller:** PWM controller based on LT3844
+- **Controller:** PWM controller based on LT3751
 
 ### Simulate
 v1.0, Schematic  
