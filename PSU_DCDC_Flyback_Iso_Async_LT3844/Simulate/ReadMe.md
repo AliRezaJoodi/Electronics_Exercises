@@ -1,5 +1,5 @@
 ### v2.0.asc
-- Output: 5V/15W x2, Isolated
+- Output: 5V/15W, Isolated
 - Isolated FeedBack using Optocoupler and TL431
 
 ### v1.0.asc
