@@ -5,7 +5,7 @@
 - **Input:** 12V
 - **Feedback Type:** Non-Isolated, Resistor Divider
 - **Discontinuous Conduction Mode (DCM)**
-- **Current Mode Control**
+- **Peak Current Mode Control**
 - **Controller:** PWM controller based on LT3751
 
 ### Simulate

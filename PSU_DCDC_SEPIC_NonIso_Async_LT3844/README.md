@@ -5,6 +5,7 @@ Note: An exercise to understand the DC-DC converter.
 ### Features
 - **Output:** 5V/15W
 - **Input:** 12V
+- **Peak Current Mode Control**
 - **Controller:** PWM controller based on LT3844
 
 ### Simulate

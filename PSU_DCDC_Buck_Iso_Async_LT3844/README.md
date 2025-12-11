@@ -5,6 +5,7 @@
 - **Non-Isolated Output:** 5V/5W
 - **Input:** 12V
 - **Asynchronous**
+- **Peak Current Mode Control**
 - **Controller:** PWM controller based on LT3844
 
 ### Simulate

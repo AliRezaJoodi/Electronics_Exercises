@@ -8,7 +8,7 @@ Without DCM detection, like in the LT3844, adjusting the switching timing correc
 - **Output:** 5V/15W x2, Isolated
 - **Input:** 12V
 - **Feedback Type:** Isolated FeedBack using Optocoupler and TL431
-- **Current Mode Control**
+- **Peak Current Mode Control**
 - **Controller:** PWM controller based on LT3844
 
 ### Simulate

@@ -7,6 +7,7 @@ Note: I tried to create a clean schematic, and then tried to modify it for 5V/15
 - **Input:** 12V
 - **Non-Isolated**
 - **Asynchronous**
+- **Peak Current Mode Control**
 - **Controller:** PWM controller based on LT3844
 
 ### Simulate

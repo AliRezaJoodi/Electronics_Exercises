@@ -7,6 +7,7 @@ Note: I tried to create a clean schematic, and then tried to modify it for 5V/10
 - **Input:** 12V
 - **Asynchronous**
 - **Feedback Type:** Non-Isolated, Resistor Divider
+- **Peak Current Mode Control**
 - **Controller:** PWM controller based on LTC3891
 
 ### Simulate

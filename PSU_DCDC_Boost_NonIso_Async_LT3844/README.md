@@ -3,8 +3,9 @@ Note: Default applications of datasheet.
 Note: An exercise to understand the DC-DC converter.  
 
 ### Features
-- **Output:** 24V/50W
+- **Output:** 48V/50W
 - **Input:** 12V
+- **Peak Current Mode Control**
 - **Controller:** PWM controller based on LT3844
 
 ### Simulate
