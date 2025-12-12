@@ -3,8 +3,8 @@ Note: The initial design is from the LT3844 datasheet. I just adjusted it to fit
 Note: An exercise to understand the DC-DC converter.  
 
 ### Features
-- **Output:** 5V/15W
-- **Input:** 12V
+- **Output:** 12V/15W
+- **Input:** 8V to 12V
 - **Peak Current Mode Control**
 - **Controller:** PWM controller based on LT3844
 
