@@ -8,7 +8,7 @@ Note: I tried to create a clean schematic, and then tried to modify it for 5V/15
 - **Non-Isolated**
 - **Asynchronous**
 - **Peak Current Mode Control**
-- **Controller:** PWM controller based on LT3844
+- **Controller:** LT3844
 
 ### Simulate
 v2.0, Schematic  

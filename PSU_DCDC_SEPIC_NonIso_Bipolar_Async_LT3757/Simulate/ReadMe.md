@@ -1,4 +1,4 @@
 ### v1.0.asc
-- Output: 12V/15W
-- Input: 5.5V to 18V
+- Output2: +12V/5W
+- Output1: -12V/5W
 - Saved in **LTspice Version 24.1.10**

@@ -1,12 +1,12 @@
-## SEPIC DC-DC Converter, Non-Isolated, Asynchronous, Based on LT3757
+## SEPIC DC-DC Converter, Non-Isolated, Bipolar, Asynchronous, Based on LT3757
 Note: The initial design is from the datasheet. I just adjusted it to fit my requirements.  
 Note: An exercise to understand the DC-DC converter.  
 
 ### Features
-- **Output:** 12V/15W
-- **Input:** 5.5V to 18V
+- **Output2:** +12V/5W
+- **Output1:** -12V/5W
 - **Peak Current Mode Control**
-- **Controller IC:** PWM controller based on LT3757
+- **Controller IC:** LT3757
 
 ### Simulate
 v1.0, Schematic  

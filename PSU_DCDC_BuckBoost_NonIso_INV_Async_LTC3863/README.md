@@ -1,4 +1,4 @@
-## Flyback DC-DC Converter, Non-Isolated, Asynchronous
+## Buck-Boost DC-DC Converter, Non-Isolated, Inverting, Asynchronous, Base on LTC3863
 Note: Default applications from LTspice for exercise
 
 ### More Information

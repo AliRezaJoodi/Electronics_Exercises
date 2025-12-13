@@ -4,9 +4,8 @@ Note: An exercise to understand the DC-DC converter.
 
 ### Features
 - **Output:** 12V/15W
-- **Input:** 5.5V to 18V
 - **Peak Current Mode Control**
-- **Controller IC:** PWM controller based on LT3757
+- **Controller IC:** LT3757
 
 ### Simulate
 v1.0, Schematic  
