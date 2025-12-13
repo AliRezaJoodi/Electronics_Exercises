@@ -1,4 +1,4 @@
-## SEPIC DC-DC Converter, Non-Isolated, Asynchronous, Based on LT3844
+## SEPIC DC-DC Converter, Non-Isolated, Non-Synchronous, Based on LT3844
 Note: The initial design is from the LT3844 datasheet. I just adjusted it to fit my requirements.  
 Note: An exercise to understand the DC-DC converter.  
 

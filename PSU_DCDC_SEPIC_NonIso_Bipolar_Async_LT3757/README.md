@@ -1,4 +1,4 @@
-## SEPIC DC-DC Converter, Non-Isolated, Bipolar, Asynchronous, Based on LT3757
+## SEPIC DC-DC Converter, Non-Isolated, Bipolar, Non-Synchronous, Based on LT3757
 Note: The initial design is from the datasheet. I just adjusted it to fit my requirements.  
 Note: An exercise to understand the DC-DC converter.  
 

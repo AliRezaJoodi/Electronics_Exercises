@@ -1,4 +1,4 @@
-## Buck-Boost DC-DC Converter, Non-Isolated, Inverting, Asynchronous, Base on LTC3863
+## Buck-Boost DC-DC Converter, Non-Isolated, Inverting, Non-Synchronous, Base on LTC3863
 Note: Default applications from LTspice for exercise
 
 ### More Information

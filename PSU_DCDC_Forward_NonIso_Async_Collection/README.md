@@ -1,4 +1,4 @@
-## Forward DC-DC Converter, Non-Isolated, Asynchronous
+## Forward DC-DC Converter, Non-Isolated, Non-Synchronous
 Note: Default applications from LTspice for exercise
 
 ### More Information

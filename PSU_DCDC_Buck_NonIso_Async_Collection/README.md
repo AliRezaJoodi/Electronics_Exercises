@@ -1,4 +1,4 @@
-## Buck DC-DC Converter, Non-Isolated, Asynchronous
+## Buck DC-DC Converter, Non-Isolated, Non-Synchronous
 Note: Default applications in LTspice for exercise
 
 ### More Information

@@ -1,4 +1,4 @@
-## Flyback DC-DC Converter, Isolated, Asynchronous
+## Flyback DC-DC Converter, Isolated, Non-Synchronous
 
 Note: This circuit is only for exercise.  
 Note: It's better to use a PWM controller IC.  

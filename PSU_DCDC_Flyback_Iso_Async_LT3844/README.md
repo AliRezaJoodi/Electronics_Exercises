@@ -1,4 +1,4 @@
-## Flyback DC-DC Converter, Isolated, Asynchronous, Based on LT3844
+## Flyback DC-DC Converter, Isolated, Non-Synchronous, Based on LT3844
 
 This circuit is only for exercise.  
 For a proper flyback design, it's better to use a controller IC that supports Discontinuous Conduction Mode (DCM) detection.  

@@ -1,4 +1,4 @@
-## Buck DC-DC Converter, Isolated, Asynchronous, Based on LT3844
+## Buck DC-DC Converter, Isolated, Non-Synchronous, Based on LT3844
 
 ### Features, v1.0
 - **Isolated Output:** 5V/5W

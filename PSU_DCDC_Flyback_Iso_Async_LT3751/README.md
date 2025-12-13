@@ -1,4 +1,4 @@
-## Flyback DC-DC Converter, Isolated, Asynchronous, Based on LT3751
+## Flyback DC-DC Converter, Isolated, Non-Synchronous, Based on LT3751
 
 ### Features
 - **Output:** 5V/15W

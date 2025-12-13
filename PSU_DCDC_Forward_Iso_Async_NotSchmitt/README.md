@@ -1,4 +1,4 @@
-## Forward DC-DC Converter, Isolated, Asynchronous, Based on Not-Schmitt
+## Forward DC-DC Converter, Isolated, Non-Synchronous, Based on Not-Schmitt
 Note: A simple example Just for exercises.  
 Note: It's better to use a PWM controller IC.  
 
