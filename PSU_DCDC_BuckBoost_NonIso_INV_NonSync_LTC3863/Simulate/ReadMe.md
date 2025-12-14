@@ -1,6 +1,6 @@
 ### v1.0.asc
-- Output: 12V/70W
-- Input: 4.5V to 9V
+- Output: -5V/15W
+- Input: 12V
 - Default applications of datasheet
 - [LTspice Personal Libraries](https://github.com/AliRezaJoodi/Electronics_Exercises/tree/main/_LTspice_Library) 
 - Saved in **LTspice Version 24.1.10**
