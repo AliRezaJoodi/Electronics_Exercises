@@ -34,3 +34,9 @@ After completing one of the above methods, you can access the components and mod
 - `.model MOSFET SW(Ron=1u Roff=100Meg Vt=90)`
 - `.model SW SW(Ron=1u Roff=100Meg Vt=90)`
 - `.model LED D(IS=2e-19 N=2 RS=5 BV=30 IBV=1e-3)`
+
+## Lable
+- `IN`, `OUT`
+- `VIN`, `GND`, `VOUT`
+- `VIN`, `GND`, `VOUT_POS`, `VOUT_NEG`
+
