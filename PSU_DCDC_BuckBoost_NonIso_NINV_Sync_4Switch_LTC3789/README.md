@@ -2,8 +2,8 @@
 Note: Default applications from LTspice for exercise
 
 ### Features
-- **Output:** 
-- **Input:** 
+- **Output:** 12W/50W
+- **Input:** 5V to 38V
 - **Peak Current Mode Control**
 - **Controller:** LTC3789
 
