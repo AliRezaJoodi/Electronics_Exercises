@@ -1,17 +1,11 @@
-## Full Bridge Rectifier, Half-Controlled, Single-Phase
-Note: MOC302x series have no zero-cross  
-Note: MOC304x series have zero-cross  
+## Buck DC-DC Converter, Non-Isolated, Non-Synchronous, Based on LM2596 Module
 
-### Picture
-v1.0  
-![](Pictures/v1.0.jpg)
-
-### Simulate
+### Simulate, 3.3V
 v1.0, Schematic  
-![](Simulate/v1.0_Schematic.png)
+![](Simulate_3V3/v1.0_Schematic.png)   
 
 v1.0, Plot  
-![](Simulate/v1.0_Plot.png)
+![](Simulate_3V3/v1.0_Plot.png)
 
 ### More Information
 **Note**: [You can go here to download a single folder or file from GitHub.com](https://minhaskamal.github.io/DownGit/#/home)  
