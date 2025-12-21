@@ -1,7 +1,7 @@
 [Transient Analysis]
 {
    Npanes: 3
-   Active Pane: 2
+   Active Pane: 1
    {
       traces: 1 {34668550,0,"I(LOAD)"}
       X: ('m',0,0,0.004,0.04)
@@ -11,7 +11,7 @@
       Log: 0 0 0
    },
    {
-      traces: 1 {589828,0,"V(l)"}
+      traces: 1 {589828,0,"V(L,N)"}
       X: ('m',0,0,0.004,0.04)
       Y[0]: (' ',0,-360,60,360)
       Y[1]: ('_',0,1e+308,0,-1e+308)
