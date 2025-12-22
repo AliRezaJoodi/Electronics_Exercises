@@ -2,10 +2,6 @@
 Note: MOC302x series have no zero-cross  
 Note: MOC304x series have zero-cross  
 
-### Picture
-v2.0  
-![](Pictures/v2.0.jpg)
-
 ### Simulate
 v2.0, Schematic  
 ![](Simulate/v2.0_Schematic1.png)  
