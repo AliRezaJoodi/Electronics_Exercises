@@ -8,7 +8,8 @@ v2.0
 
 ### Simulate
 v2.0, Schematic  
-![](Simulate/v2.0_Schematic.png)
+![](Simulate/v2.0_Schematic1.png)  
+![](Simulate/v2.0_Schematic2.png)  
 
 v2.0, Plot  
 ![](Simulate/v2.0_Plot.png)
