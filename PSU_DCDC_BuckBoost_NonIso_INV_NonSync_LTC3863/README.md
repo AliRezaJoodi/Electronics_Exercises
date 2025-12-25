@@ -1,9 +1,9 @@
 ## Buck-Boost DC-DC Converter, Non-Isolated, Inverting, Non-Synchronous, Base on LTC3863
-Note: Default applications from LTspice for exercise
+Note: The design is from the datasheet.  
 
 ### Features
-- **Output:** -5V/15W
-- **Input:** 12V
+- **Output:** -5V/10W
+- **Input:** 7V to 16V
 - **Peak Current Mode Control**
 - **Controller:** LTC3863
 
