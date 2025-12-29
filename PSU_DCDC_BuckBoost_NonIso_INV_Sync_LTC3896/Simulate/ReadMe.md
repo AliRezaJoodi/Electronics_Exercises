@@ -1,5 +1,5 @@
 ### v1.0.asc
-- Output: -12V/30W
+- Output: -12V/60W
 - Input: 8V to 72V
 - Default applications of datasheet
 - [LTspice Personal Libraries](https://github.com/AliRezaJoodi/Electronics_Exercises/tree/main/_LTspice_Library) 

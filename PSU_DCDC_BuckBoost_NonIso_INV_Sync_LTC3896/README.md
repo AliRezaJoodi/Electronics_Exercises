@@ -1,8 +1,8 @@
 ## Buck-Boost DC-DC Converter, Non-Isolated, Inverting, Synchronous, Base on LTC3896
-Note: Default applications from LTspice for exercise
+Note: The design is from the datasheet.
 
 ### Features
-- **Output:** -12V/30W
+- **Output:** -12V/60W
 - **Input:** 8V to 72V
 - **Peak Current Mode Control**
 - **Controller:** LTC3896
