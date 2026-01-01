@@ -1,5 +1,5 @@
 ## Buck-Boost DC-DC Converter, Non-Isolated, Non-Inverting, Non-Synchronous, 2-Switch, Base on LT8711
-Note: Default applications from LTspice for exercise
+Note: Default applications of datasheet.
 
 ### Features
 - **Output:** 12W/15W
