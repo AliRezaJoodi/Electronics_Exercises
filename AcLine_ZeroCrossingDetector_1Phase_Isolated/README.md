@@ -1,8 +1,16 @@
-## Zero Crossing Detector for Single Phase
+## Isolated Single-Phase Zero Crossing Detector
 
 ### Picture
 v2.0  
 ![](Pictures/v2.0.jpg)
+
+### Features, v3.1
+- **AC Input Protection:** Fuse + MOV
+- **Isolation Type:** Optical
+- **Isolation IC:** LTV814
+- **Detection Level:** Falling-edge
+- **Display:** LED indicator
+- **Power Supply:** 3.3V
 
 ### Simulate
 v3.1, Schematic  

@@ -1,7 +1,7 @@
 ## Isolated 3-Phase Detector Using Optocoupler
 
 ### Features, v4.0
-- **Isolation Type:** Opto
+- **Isolation Type:** Optical
 - **Isolation IC:** LTV814 x3
 - **Display:** LED
 - **Output Rule:** Output is AND with all three phases

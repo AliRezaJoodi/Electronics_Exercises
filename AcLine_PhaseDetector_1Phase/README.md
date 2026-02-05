@@ -5,7 +5,7 @@ v1.1
 ![](Pictures/v1.1.jpg)
 
 ### Features, v4.1
-- **Isolation Type:** Opto
+- **Isolation Type:** Optical
 - **Isolation IC:** LTV814
 - **Display Type:** LED
 - **Power Supply:** 3.3V
