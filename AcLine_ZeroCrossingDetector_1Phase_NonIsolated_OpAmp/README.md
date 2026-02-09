@@ -1,4 +1,7 @@
-## Zero Crossing Detector, 1-Phase Dimmer, Non-isolated, Based on OpAmp
+## Zero Crossing Detector, Single-Phase, Non-isolated, Based on OpAmp
+
+### Features
+- **Detection Level:** Falling-edge
 
 ### Simulate
 v1.0, Schematic  

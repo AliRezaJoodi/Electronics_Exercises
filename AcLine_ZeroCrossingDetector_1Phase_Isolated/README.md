@@ -1,4 +1,4 @@
-## Isolated Single-Phase Zero Crossing Detector
+## Zero Crossing Detector, Single-Phase, Isolated
 
 ### Picture
 v2.0  

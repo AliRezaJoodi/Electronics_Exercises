@@ -1,4 +1,4 @@
-## Isolated 3-Phase Detector Using Optocoupler
+## Phase Detector, 3-Phase, Isolated
 
 ### Features, v4.0
 - **Isolation Type:** Optical

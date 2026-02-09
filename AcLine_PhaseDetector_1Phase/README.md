@@ -1,4 +1,4 @@
-## Isolated Single Phase Detector Using Optocoupler
+## Phase Detector, Single-Phase, Isolated
 
 ### Picture
 v1.1  
