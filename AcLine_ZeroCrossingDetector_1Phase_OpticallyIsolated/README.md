@@ -1,4 +1,4 @@
-## Zero Crossing Detector, Single-Phase, Isolated
+## Zero-Crossing Detector, Single-Phase, Optically Isolated
 
 ### Picture
 v2.0  

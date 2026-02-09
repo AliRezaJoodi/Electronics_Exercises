@@ -1,6 +1,7 @@
-## Zero Crossing Detector, Single-Phase, Non-isolated, Based on OpAmp
+## Zero-Crossing Detector, Single-Phase, Transformer-Isolated, Based on Transistor
 
 ### Features
+- **Isolation Type:** Transformer
 - **Detection Level:** Falling-edge
 
 ### Simulate
