@@ -1,4 +1,4 @@
-## Zero Crossing Detector for 3-phase dimmer  
+## Zero Crossing Detector, 3-phase dimmer, Optically Isolated  
 It's useful for detecting 30^ to 150^ range.  
 It has been successfully tested several times.  
 
