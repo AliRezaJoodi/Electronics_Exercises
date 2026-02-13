@@ -15,6 +15,10 @@ v4.0, Schematic
 v4.0, Plot  
 ![](Simulate/v4.0_Plot.png)
 
+### Upgrade
+- Blackout Detection
+- Brownout Detection
+
 ### More Information
 **Note**: [You can go here to download a single folder or file from GitHub.com](https://minhaskamal.github.io/DownGit/#/home)  
 My GitHub Account: [GitHub.com/AliRezaJoodi](https://github.com/AliRezaJoodi)  
