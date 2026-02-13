@@ -1,22 +1,27 @@
-## Phase Detector, Single-Phase, Isolated
+## Phase Detector, Single-Phase, Optically Isolated
 
 ### Picture
 v1.1  
 ![](Pictures/v1.1.jpg)
 
-### Features, v4.1
+### Features, v2.0
 - **Isolation Type:** Optical
 - **Isolation IC:** LTV814
 - **Display Type:** LED
 - **Power Supply:** 3.3V
 - **Active Level:** Low
 
-### Simulate
-v4.1, Schematic  
-![](Simulate/v4.1_Schematic.png)
+Note: Does not support brownout (under-voltage) detection.
 
-v4.1, Plot  
-![](Simulate/v4.1_Plot.png)
+### Simulate
+v2.0, Schematic  
+![](Simulate/v2.0_Schematic.png)
+
+v2.0, Plot  
+![](Simulate/v2.0_Plot.png)
+
+### Upgrade
+- Brownout Detection
 
 ### More Information
 **Note**: [You can go here to download a single folder or file from GitHub.com](https://minhaskamal.github.io/DownGit/#/home)  
