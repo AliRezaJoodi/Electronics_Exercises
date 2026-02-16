@@ -16,7 +16,6 @@ v2.0, Plot
 ![](Simulate/v2.0_Plot.png)
 
 ### Upgrade
-- Blackout Detection
 - Brownout Detection
 
 ### More Information
