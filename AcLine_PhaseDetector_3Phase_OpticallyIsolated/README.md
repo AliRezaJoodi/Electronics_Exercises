@@ -1,6 +1,6 @@
-## Phase Detector, 3-Phase, Isolated
+## Phase Detector, 3-Phase, Optically Isolated
 
-### Features, v4.0
+### Features, v2.0
 - **Isolation Type:** Optical
 - **Isolation IC:** LTV814 x3
 - **Display:** LED
@@ -9,11 +9,11 @@
 - **Active Level:** Low
 
 ### Simulate
-v4.0, Schematic  
-![](Simulate/v4.0_Schematic.png)
+v2.0, Schematic  
+![](Simulate/v2.0_Schematic.png)
 
-v4.0, Plot  
-![](Simulate/v4.0_Plot.png)
+v2.0, Plot  
+![](Simulate/v2.0_Plot.png)
 
 ### Upgrade
 - Blackout Detection
