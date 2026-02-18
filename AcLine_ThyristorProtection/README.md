@@ -1,4 +1,4 @@
-## Thyristor Protection
+## Thyristor Protection, RC Snubber
 
 ### Simulate
 v1.0, Schematic  
