@@ -1,4 +1,8 @@
 ## Boot Strap for Gate Driver
+This circuit is essential when using a high-side N-Channel MOSFET.  
+It provides the necessary voltage to fully turn on the MOSFET in high-side configurations.  
+
+Note: This schematic is very slow. It's better to use specialized drivers.
 
 ### Simulate
 v1.0, Schematic  
